@@ -1,41 +1,74 @@
-# Problem A : Image classification
+# Problem C : Finding the Lost Treasure
 
 ## Statement:
 
+Luffy, a passionate adventurer, recently acquired a legendary and valuable treasure map leading to the hidden One Piece. Eager to share his discovery,Luffy invited his n Nakama (friends) to The Going Merry, where he proudly displayed the map.
 
+The Nakama, one by one, entered and exited the room. At no point were there more than one friend in the room. In other words, the first friend entered and left first, then the second, and so on.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-**This text is in bold**
+At the beginning (before any friend visited), the One Piece map was in the room. However, by the end (after the n-th friend), the map mysteriously vanished. The exact moment of disappearance remains shrouded in uncertainty.
 
-  - Lorem Ipsum dolor sit amet
+Determined to identify the felon, Luffy questioned his friends one by one in the same order they visited the map. Each friend was asked if the map was still there when they entered. Each friend answered one of three answers:
 
+- No (response encoded with **0**)
+- Yes (response encoded with **1**)
+- Can't remember (response encoded with **?**)
+
+Everyone except the thief either doesn't remember or **told the truth**. The thief, however, **can say anything** (any of the three options).
+
+Monkey D cannot understand who the thief is. He asks you to find out **the number of those who can be considered a thief** according to the answers.
 
 ## Input :
-The first line contains a single integer **T** (1≤T≤100) — the number of test cases. Then the test cases follow. Each test case consists of one line.
 
-The first line contains two integers **n**, **m** (1≤n, m≤100)
+The first line contains a single integer **T** (1≤T≤10^4) — the number of test cases. Then the test cases follow. Each test case consists of one line.
 
-Each of the next n lines ...
+For each test case:
+
+A single line s describes the friends answers in the order they visited the map (length ≤ 2⋅10^5), where each character si in the string is either 0 or 1 or ? indicates the answer of the i-th friend.
+
+It is guaranteed that the sum of string lengths over the entire input data set does not exceed 2⋅10^5.
 
 ## Output :
-For each test case, output ....
+
+For each test case, output a positive integer (strictly greater than zero) representing the number of friends who could have stolen the One Piece map based on the provided responses (those whom Luffy could suspect of stealing the map).
 
 ## Example:
-Input :  
+
+Input :
 
 ```
+8
+0
+1
+1110000
+?????
+1?1??0?0
+0?0???
+??11
+??0??
+```
+
+Output :
+
+```
+1
+1
+2
+5
 4
-4 5 6 7
-1 2 34 5
-49 45 12 10
-1 1 1 1
+1
+1
+3
 ```
 
-Output :  
+## Note:
 
-```
-Yes
-Yes
-No 
-Yes
-```
+In the first case, the answer is 1
+since we had exactly 1
+friend.
+
+The second case is similar to the first.
+
+In the third case, the suspects are the third and fourth friends (we count from one). It can be shown that no one else could be the thief.
+
+In the fourth case, we know absolutely nothing, so we suspect everyone.
