@@ -1,34 +1,30 @@
-# Problem A : Image classification
+
+# Problem D: Currensea
 
 ## Statement:
+The world of one piece is vast and contains numerous mystical islands. One such island is "Currensea": an island where its only currency are coins with values (11, 111, 1111, ...).
+Upon arrival on this island, Nami wants to sell her new jewelry she acquired in Skypeia but doesn't know how to price her goods.
 
+She wants to know, if it's possible to price her jewelry to some integer **n** so that it can be bought using this island's unique currency?
 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-**This text is in bold**
-
-  - Lorem Ipsum dolor sit amet
-
+**Note that you can use any coin any number of times to buy something.** 
 
 ## Input :
-The first line contains a single integer **T** (1≤T≤100) — the number of test cases. Then the test cases follow. Each test case consists of one line.
-
-The first line contains two integers **n**, **m** (1≤n, m≤100)
-
-Each of the next n lines ...
+The first line contains a single integer **T** $(1≤T≤1000)$ — the number of test cases. Then the test cases follow. 
+Each test case consists of one line. the integer  **n** $(0≤n≤10^9)$
 
 ## Output :
-For each test case, output ....
+For each testcase, you should output a single string. If you can buy n using the island's currency, output "YES" (without quotes). Otherwise, output "NO".
 
+You can print each letter of "YES" and "NO" in any case (upper or lower).
 ## Example:
 Input :  
 
 ```
-4
-4 5 6 7
-1 2 34 5
-49 45 12 10
-1 1 1 1
+3
+55
+1122
+150
 ```
 
 Output :  
@@ -37,5 +33,8 @@ Output :
 Yes
 Yes
 No 
-Yes
 ```
+## Explanation
+* 55 = 5*11
+* 1122 = 11 + 1111
+* It can be proved that 150 can't be written as the sum of 11*a + 111*b
