@@ -4,38 +4,49 @@
 
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-**This text is in bold**
+Nami is the navigator of the Straw Hat Pirates in "One Piece", and one of her primary skills is cartography. 
 
-  - Lorem Ipsum dolor sit amet
+She has recently drawn a map for her team, this map is a matrix composed of integers. This matrix is servers as a guide to finding hidden treasures.
+
+A position **(x, y)** in our **matrix(n, m)** (**n** and **m** are the number of rows and columns respectively) can contain a treasure if the sum of integers in row **x** from column **1** to column **(y - 1)** + the sum of integers in column **y** from row **1** to row **(x - 1)** is equal to the sum of integers in row **x** from column **(y + 1)** to column **m** + the sum of integers in column **y** from row **(x + 1)** to row **n**.
+<br>More Formally.....
+
+This diagram shows an example.
+
+You will be given the matrix, and q queries, for each query you will be given a position **(x, y)** and you have to output **"YES"** if that position can contain a treasure, and **"NO"** otherwise.
 
 
 ## Input :
-The first line contains a single integer **T** (1≤T≤100) — the number of test cases. Then the test cases follow. Each test case consists of one line.
+The first line contains 3 integers **n**, **m** (2≤n, m≤10<sup>3</sup>), number of rows and number of columns of our matrix respectively and **q** queries (1≤q≤10<sup>6</sup>).
 
-The first line contains two integers **n**, **m** (1≤n, m≤100)
+The next n lines each contain m integers seperated by spaces describing rows of the matrix. Each integer of the matrix **a<sub>i,j</sub>** &isin; [-10<sup>9</sup>, 10<sup>9</sup>].
 
-Each of the next n lines ...
+The next q lines each contain 2 integers **x** and **y** (1≤x≤n, 1≤y≤m), a specific row and column of our matrix respectively.
+
 
 ## Output :
-For each test case, output ....
+For each query, output **"YES"**(without quotes) if the position **(x, y)** can contain a treasure, and **"NO"**(without quotes) otherwise.
 
 ## Example:
 Input :  
 
 ```
-4
-4 5 6 7
-1 2 34 5
-49 45 12 10
-1 1 1 1
+3 4 3
+5 2 3 7
+5 1 5 0
+1 4 9 0
+1 2
+2 3
+3 3
 ```
 
 Output :  
 
 ```
-Yes
-Yes
-No 
-Yes
+NO
+YES
+NO
 ```
+## Note:
+In the **first** test case the answer is no because: 5 **#** 3 + 7 + 1 + 4.
+<br>In the **second** test case the answer is yes because: 5 + 1 + 3 **=** 0 + 9.
