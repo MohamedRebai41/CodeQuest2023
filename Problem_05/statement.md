@@ -16,7 +16,6 @@ Each test case consists of one line. the integer  **n** $(0≤n≤10^9)$
 ## Output :
 For each testcase, you should output a single string. If you can buy n using the island's currency, output "YES" (without quotes). Otherwise, output "NO".
 
-You can print each letter of "YES" and "NO" in any case (upper or lower).
 ## Example:
 Input :  
 
