@@ -1,4 +1,5 @@
 
+
 # Problem D: Currensea
 
 ## Statement:
@@ -36,4 +37,4 @@ No
 ## Explanation
 * 55 = 5*11
 * 1122 = 11 + 1111
-* It can be proved that 150 can't be written as the sum of 11*a + 111*b
+* It can be proved that 150 can't be written as the sum of $11a + 111b + 1111c + 11111d + ...$ 
