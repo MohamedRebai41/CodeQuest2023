@@ -1,8 +1,8 @@
 
 # Statement 
-The Straw Hat Pirates, composed of k members, are eagerly anticipating a festive celebration, and their chosen delight for the occasion is pies. Each pie is segmented into x pieces. However, their captain, the indefatigable Monkey D. Luffy, has a formidable appetite and can eat up to y pieces all by himself. 
+The Straw Hat Pirates, composed of k members, are eagerly anticipating a festive celebration, and their chosen delight for the occasion is pies. Each pie is segmented into x pieces. However, their captain, the indefatigable Monkey D. Luffy, has a formidable appetite and will eat up to y pieces all by himself. 
 
-The Straw Hat Pirates are not really good with math, so they ask for your help to decide how many pies they need to buy to satisfy all the crew members' appetites. 
+The Straw Hat Pirates are not really good with math, so they ask for your help to decide the minimum number of pies they need to buy to satisfy all the crew members' appetites. 
 # Input 
 - The first line contains a single integer **T** $(1≤T≤1000)$ — the number of test cases. Then the test cases follow. 
 - The first line of each test case contains an integer x $(1 ≤ x ≤ 10^4)$ – the total number of pieces in each pie. 
