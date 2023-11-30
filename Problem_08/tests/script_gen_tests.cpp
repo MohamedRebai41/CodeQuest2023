@@ -53,9 +53,7 @@ int main() {
         cout<<t<<endl;
         for(int j=0;j<t;j++)
         {
-            cout << randomInt (1,10000) << endl;
-            cout << randomInt (1,10000) << endl;
-            cout << randomInt (0,10000) << endl;
+            cout << randomInt (1,10000) << ' ' << randomInt (1,10000) <<' ' << randomInt (0,10000) << endl;
         }
         fclose(stdout);
         delete[] fileName;
