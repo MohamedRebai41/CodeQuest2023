@@ -13,7 +13,7 @@ int main() {
         if (ai < bi) turn = !turn;
         else if (ai == bi) break;
     }
-    cout << ((turn) ? "Alice" : "Bob");
+    cout << ((turn) ? "Luffy" : "Zoro");
 
     return 0;
 }
