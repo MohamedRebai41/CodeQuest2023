@@ -1,4 +1,4 @@
-# Problem A : Image classification
+# Problem A : Hidden Treasures
 
 ## Statement:
 
@@ -6,12 +6,13 @@
 
 Nami is the navigator of the Straw Hat Pirates in "One Piece", and one of her primary skills is cartography. 
 
-She has recently drawn a map for her team, this map is a matrix composed of integers. This matrix is servers as a guide to finding hidden treasures.
+She has recently drawn a map for her team, this map is a matrix of dimensions **n×m**, where **n** and **m** denote the number of rows and columns respectively, composed of integers. This matrix serves as a guide to finding hidden treasures.
 
-A position **(x, y)** in our **matrix(n, m)** (**n** and **m** are the number of rows and columns respectively) can contain a treasure if the sum of integers in row **x** from column **1** to column **(y - 1)** + the sum of integers in column **y** from row **1** to row **(x - 1)** is equal to the sum of integers in row **x** from column **(y + 1)** to column **m** + the sum of integers in column **y** from row **(x + 1)** to row **n**.
-<br>More Formally.....
+A position **(x, y)** in our **matrix(n, m)** may contain a treasure if the sum of integers in the sub-matrix from the top-left corner **(0, 0)** to the bottom-right corner **(x, y)** is equal to 0.
+<br>More Formally: i=0 ∑ x j=0 ∑ y M[i][j]=0
 
 This diagram shows an example.
+
 
 You will be given the matrix, and q queries, for each query you will be given a position **(x, y)** and you have to output **"YES"** if that position can contain a treasure, and **"NO"** otherwise.
 
@@ -32,9 +33,9 @@ Input :
 
 ```
 3 4 3
-5 2 3 7
-5 1 5 0
-1 4 9 0
+5 2 -3 7
+5 -1 -8 0
+1 4 9 5
 1 2
 2 3
 3 3
@@ -48,5 +49,5 @@ YES
 NO
 ```
 ## Note:
-In the **first** test case the answer is no because: 5 **#** 3 + 7 + 1 + 4.
-<br>In the **second** test case the answer is yes because: 5 + 1 + 3 **=** 0 + 9.
+In the **first** query the answer is no because: 5 + 2 **#** 0
+<br>In the **second** query the answer is yes because: 5 + 2 - 3 + 5 - 1 - 8 **=** 0
