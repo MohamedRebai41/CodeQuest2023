@@ -7,7 +7,7 @@
 
 Monkey D. Luffy, the main character of "One Piece," is known for his love of food, particularly meat.
 
-You will be given a string consisting of the characters '**.**', '**#**' and '**|**': '**.**' is an empty spot, '**#**' is a piece of meat and '**|**' is a wall. This string represents a **1D** grid.  
+You will be given a string consisting of the characters '**.**', '**#**' and '**|**':<br> '**.**' is an empty spot, '**#**' is a piece of meat and '**|**' is a wall. This string represents a **1D** grid.  
 
 Luffy needs to choose a starting point and a walking direction(left or right) such that he maximizes the meat eaten.
 So he asked for your help.
@@ -17,7 +17,7 @@ Your goal is to put Luffy in one of the empty spots in order to maximize the mea
 - Luffy can move in only 1 direction in the grid(left or right), in other words he can't change his direction after choosing it.
 - Luffy will stop if he finds a wall or the edge of the grid.
 
-After putting Luffy in one of the empty spots, it is guaranteed that he will choose the direction that maximizes the quantity of meat he gets.
+It is guaranteed that the grid contains at least one empty spot.
 
 ## Input :
 The first line of input contains a single integer **T** (1≤T≤100) — the number of test cases. Then the test cases follow. Each test case consists of two lines.
