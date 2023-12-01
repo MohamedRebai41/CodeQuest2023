@@ -1,41 +1,53 @@
-# Problem A : Image classification
+# Welcome to StackEdit!
 
-## Statement:
+In the adventurous world of One Piece, our crew of intrepid pirates stumbled
 
+upon a curious challenge. Scattered across a mystical island were various points
 
+forming a circle. The task at hand: figure out how many different right triangles
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-**This text is in bold**
+could be crafted from these points. The catch? The crew needed to count the number
 
-  - Lorem Ipsum dolor sit amet
+of unique trios of points, making sure each set was distinct. Can the crew navigate
 
+through this geometric puzzle and uncover the secrets hidden within the
 
-## Input :
-The first line contains a single integer **T** (1≤T≤100) — the number of test cases. Then the test cases follow. Each test case consists of one line.
+isle's mathematical shores?
 
-The first line contains two integers **n**, **m** (1≤n, m≤100)
+## Input Format
 
-Each of the next n lines ...
+The first line contains an integer n(1 ≤ n ≤100000), the number of points.
 
-## Output :
-For each test case, output ....
+The second line contains n space-separated integers aᵢ(1≤aᵢ≤10^9) -- the **length of the arc** between point i and point i+1 (for 1≤i≤n−1), and aₙ is the distance between the point number n and the first point.
+
+## Output Format
+
+for each test case print the number of unique right triangles that can be formed.
 
 ## Example:
-Input :  
+
+Input :
 
 ```
 4
-4 5 6 7
-1 2 34 5
-49 45 12 10
-1 1 1 1
+3 2 1 4
 ```
 
-Output :  
+Output :
 
 ```
-Yes
-Yes
-No 
-Yes
+2
+```
+
+Input :
+
+```
+3
+1 2 3
+```
+
+Output :
+
+```
+1
 ```
