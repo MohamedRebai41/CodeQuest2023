@@ -38,7 +38,7 @@ char * getFilename(int index, int maxIndex)
 
 
 int main() {
-    int tests = 20;
+    int tests = 30;
     char* fileName = getFilename(1, tests);
     freopen(fileName, "w" , stdout);
     cout << 2 << endl << 8 << endl << 3 << endl << 10 << endl << 4 << endl << 1 << endl << 2 << endl;;   
@@ -51,9 +51,30 @@ int main() {
         freopen(fileName, "w" , stdout);
         int t = randomInt(1,1000);
         cout<<t<<endl;
-        for(int j=0;j<t;j++)
+         for(int j=0;j<t;j++)
         {
-            cout << randomInt (1,10000) << ' ' << randomInt (1,10000) <<' ' << randomInt (0,10000) << endl;
+            int aux=randomInt(0,2);
+            if (aux==0)
+            {
+                int k= randomInt (1,10000);
+                int y=randomInt(0,10000);
+                vector<int> divis;
+                for (int i=2; i<(k+y-1)/2;i++)
+                {
+                    if ((k+y-1)%i==0) divis.push_back(i);
+                }
+                if (divis.size()==0) cout << randomInt (1,10000) << ' ' << randomInt (0,10000) <<' ' << randomInt (1,10000) << endl;
+                else
+                {
+                    int pos=randomInt(0,divis.size());
+                    int x=divis[pos];
+                    cout << x <<' '<<y<<' '<<k<<endl;
+                }
+            }
+            else 
+            {
+                cout << randomInt (1,10000) << ' ' << randomInt (0,10000) <<' ' << randomInt (1,10000) << endl;
+            }
         }
         fclose(stdout);
         delete[] fileName;
