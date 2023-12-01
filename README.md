@@ -10,3 +10,4 @@ This repository contains the problem set of the 1st edition of the beginner comp
 * Khelil Mehdi
 * Addela Raed
 * Mallek Amir
+* Hatem Gharsallah
