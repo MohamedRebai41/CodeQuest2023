@@ -1,6 +1,6 @@
 
 # Statement 
-The Straw Hat Pirates, composed of k members including their captainS, are eagerly anticipating a festive celebration, and their chosen delight for the occasion is pies. Each pie is segmented into x pieces. However, their captain, the indefatigable Monkey D. Luffy, has a formidable appetite and will eat up to y pieces all by himself. 
+The Straw Hat Pirates, composed of **k** members **including their captain** , are eagerly anticipating a festive celebration, and their chosen delight for the occasion is pies. Each pie is segmented into **x** pieces. However, their captain, Monkey D. Luffy, has a formidable appetite and will eat up to **y** pieces all by himself. 
 
 The Straw Hat Pirates are not really good with math, so they ask for your help to decide the minimum number of pies they need to buy to satisfy all the crew members' appetites. 
 # Input 
