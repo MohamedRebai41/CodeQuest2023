@@ -20,18 +20,20 @@ Nami cannot find who the thief is. She asks you to find out **the number of pote
 
 ## Input :
 
-The first line contains a single integer **T** $(1≤T≤10^4)$ — the number of test cases. Then the test cases follow. Each test case consists of one line.
+The first line contains a single integer **T** $(1≤T≤10^4)$ — the number of test cases. Then the test cases follow. Each test case consists of two lines.
 
 For each test case:
 
-A single line s describes the friends answers in the order they visited the map $(length ≤ 2⋅10^5)$, where each character $s_i$ in the string is either 0 or 1 or ? indicates the answer of the i-th friend.
+The first line contains a single integer **n** $(1≤T≤2⋅10^5)$ — the lenght of the string s that describes the friends answers.
+
+The second line s describes the friends answers in the order they visited the map $(s.length ≤ 2⋅10^5)$, where each character $s_i$ in the string is either 0 or 1 or ? indicates the answer of the i-th friend.
 **It is guaranteed that the input is logically correct**.
 
 It is guaranteed that the sum of string lengths over the entire input data set does not exceed $2⋅10^5$.
 
 ## Output :
 
-For each test case, output a positive integer (strictly greater than zero) representing the number of friends who could have stolen the One Piece map based on the provided responses (those whom Luffy could suspect of stealing the map).
+For each test case, output a positive integer (strictly greater than zero) representing the number of friends who could have stolen the necklace based on the provided responses (those whom Nami could suspect of stealing the necklace).
 
 ## Example:
 
@@ -39,8 +41,11 @@ Input :
 
 ```
 3
+7
 1110000
+8
 1?1??0?0
+4
 ??11
 ```
 
