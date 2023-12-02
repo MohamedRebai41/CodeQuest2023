@@ -17,6 +17,7 @@ Output "YES" without quotes if they should send Nami. Otherwise, output "NO"
 Input :  
 
 ```
+22
 MMMMMMMMMMMMMMMMMMMMMM
 ```
 
@@ -29,7 +30,8 @@ NO
 Input :  
 
 ```
-MWWWMMMMMMMMMMMMMMMMMM
+24
+MWWWMMMMMMMMMMMMMMMMMMMW
 ```
 
 Output :  
