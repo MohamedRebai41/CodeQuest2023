@@ -66,7 +66,7 @@ int main() {
                 if (divis.size()==0) cout << randomInt (1,10000) << ' ' << randomInt (0,10000) <<' ' << randomInt (1,10000) << endl;
                 else
                 {
-                    int pos=randomInt(0,divis.size());
+                    int pos=randomInt(0,divis.size()-1);
                     int x=divis[pos];
                     cout << x <<' '<<y<<' '<<k<<endl;
                 }
