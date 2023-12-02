@@ -1,22 +1,22 @@
-# Problem C : Finding the Lost Treasure
+# Problem C : Stolen necklace
 
 ## Statement:
 
-Luffy, a passionate adventurer, recently acquired a legendary and valuable treasure map leading to the hidden One Piece. Eager to share his discovery,Luffy invited his **n** Nakama (friends) to The Going Merry, where he proudly displayed the map.
+Nami, recently acquired a priceless necklace. Eager to share her new treasure,She invited her **n** friends to The Going Merry (the straw hats' pirate ship) , where she proudly displayed the necklace.
 
-The Nakama, **one by one**, entered and exited the room. At no point were there more than one friend in the room. In other words, the first friend entered and left first, then the second, and so on.
+The friends, **one by one**, entered and exited the room. At no point were there more than one friend in the room. In other words, the first friend entered and left first, then the second, and so on.
 
-At the beginning (before any friend visited), **the One Piece map was in the room**.However, by the end (after the n-th friend), **the map mysteriously vanished**.The exact moment of disappearance remains shrouded in uncertainty.
+At the beginning (before any friend visited), **the necklace was in the room**.However, by the end (after the n-th friend), **the map mysteriously vanished**.The exact moment of disappearance remains shrouded in uncertainty.
 
-Determined to identify the felon, Luffy questioned his friends one by one in the same order they visited the map. Each friend was asked if the map was still there when they entered. Each friend answered one of three answers:
+Determined to identify the culprit, Nami questioned her friends one by one in the same order they visited the room. Each friend was asked if the map was still there when they entered. Each friend answered using one of three answers:
 
-- No (response encoded with **0**)
-- Yes (response encoded with **1**)
-- Can't remember (response encoded with **?**)
+- No (represented with **0**)
+- Yes (represented with **1**)
+- Can't remember (represented with **?**)
 
-Everyone except the thief either doesn't remember or **told the truth**. The thief, however, **can say anything** (any of the three options).
+Everyone except the thief either couldn't remember or **told the truth**. The thief, however, **can say anything** (any of the three options).
 
-Luffy cannot understand who the thief is. He asks you to find out **the number of those who can be considered a thief** according to the answers.
+Nami cannot find who the thief is. She asks you to find out **the number of potential suspects** according to the answers of her friends.
 
 ## Input :
 
@@ -54,4 +54,4 @@ Output :
 
 ## Note:
 
-In the firs case, the suspects are the third and fourth friends (we count from one).It can be shown that no one else could be the thief.
+In the first case, the suspects are the third and fourth friends (one-indexed).It can be shown that no one else could be the thief.
