@@ -47,3 +47,7 @@ Output :
 ```
 1
 ```
+
+
+
+![Illustration](./illustration.jpg)
