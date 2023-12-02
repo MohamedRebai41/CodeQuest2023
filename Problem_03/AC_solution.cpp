@@ -7,11 +7,13 @@ int main()
     cin >> t;
     while (t--)
     {
+        int n;
+        cin >> n;
         string s;
         cin >> s;
         int ans;
-        int lastOne = -1, firstZero = s.length();
-        for (int i = 0; i < s.length(); i++)
+        int lastOne = -1, firstZero = n;
+        for (int i = 0; i < n; i++)
         {
             if (s[i] == '1')
                 lastOne = i;
@@ -21,9 +23,9 @@ int main()
                 break;
             }
         }
-        if (lastOne != -1 && firstZero != s.length())
+        if (lastOne != -1 && firstZero != n)
             ans = firstZero - lastOne + 1;
-        else if (lastOne == -1 && firstZero == s.length())
+        else if (lastOne == -1 && firstZero == n)
         {
             ans = firstZero;
         }
