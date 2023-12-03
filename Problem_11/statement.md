@@ -1,41 +1,57 @@
-# Problem A : Image classification
+# Problem K : Cloning Fruit
 
 ## Statement:
 
+In One Piece world, there exists a remarkable tree known as the Cloning Tree. This tree bears a fruit "The Cloning Fruit" with a magical effect, duplicating every person who consumes it.
+In the queue for the "Cloning Tree", **m** nakama (friends) await their turn. The first person in the queue, denoted as Luffy for example, consumes a fruit and duplicates. The resulting two Luffys move to the end of the queue. Subsequently, each person who consumes a fruit undergoes the same process, creating an **infinite** doubling cycle.
 
+For example, if the initial queue consists of 5 people (Luffy, Nami, Zoro, Sanji, Brook), and Zoro consumes the third Cloning Fruit, the updated queue becomes: Sanji, Brook, Luffy, Luffy, Nami, Nami, Zoro, Zoro.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-**This text is in bold**
-
-  - Lorem Ipsum dolor sit amet
-
+Write a program to determine the name of the person who consumes the **n-th** cloning fruit.
 
 ## Input :
-The first line contains a single integer **T** (1≤T≤100) — the number of test cases. Then the test cases follow. Each test case consists of one line.
 
-The first line contains two integers **n**, **m** (1≤n, m≤100)
-
-Each of the next n lines ...
+The first line contains a single integer**n** $(1≤n≤10^9)$ representing the mentioned **n**.
+The second line contains a single integer **m** $(1≤n≤1000)$ indicating the initial number of people in the queue.
+The next **m** lines contains the names of the m individuals with the i-th line representing the name of the i-th person.
+**It is guaranteed that the length of all names does not exceed 10**.
 
 ## Output :
-For each test case, output ....
+
+For each test case, output a single line — **the name of the person who consumes the n-th cloning fruit**. The fruits are numbered starting from 1.
 
 ## Example:
-Input :  
+
+Input :
 
 ```
-4
-4 5 6 7
-1 2 34 5
-49 45 12 10
-1 1 1 1
+3
+5
+luffy
+nami
+zoro
+sanji
+brook
 ```
 
-Output :  
+Output :
 
 ```
-Yes
-Yes
-No 
-Yes
+zoro
+```
+
+Input :
+
+```
+20
+3
+luffy
+nami
+zoro
+```
+
+Output :
+
+```
+zoro
 ```
