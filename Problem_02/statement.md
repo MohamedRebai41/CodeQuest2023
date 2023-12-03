@@ -5,13 +5,13 @@ Monkey D. Luffy and Roronoa Zoro are engaged in a strategic number swapping game
 The rules of the game are:
 
  - Game starts at turn 1 from the left digits of $A$ and $B$.
- 
+
  - in the $i$-th turn, if $a_i > b_i$, the current player must swap $a_i$ and $b_i$. The current player keeps playing the next turn.
- 
+
  - in the $i$-th turn, if $a_i < b_i$, the current player loses his turn and the other player plays the next turn.
- 
+
  - in the $i$-th turn, if $a_i = b_i$, the current player has two choices. Either he keeps playing the next turn or lets the other player play the next turn.
- 
+
  - The game ends in the ${(n+1)}$-th turn. The winner is the player who has the turn in the ${(n+1)}$-th turn.
 
 Given $A$ and $B$, your task is determine the winner of the game if Luffy begins playing in the first turn and both players play optimally.  
@@ -20,11 +20,11 @@ Given $A$ and $B$, your task is determine the winner of the game if Luffy begins
 The first line of input contains a single integer $n$ ($1 \leq n \leq 4 \times 10^6$), the number of digits of $A$ and $B$.
 
 The second line of input contains a single integer $A$.
- 
+
 The second line of input contains a single integer $B$.
 
 ## Output:
-Print a single line containing "**Luffy**" if Alice wins or "**Zoro**" if Bob wins. 
+Print a single line containing "**Luffy**" if Luffy wins or "**Zoro**" if Zoro wins. 
 
 ## Example:
 input:
