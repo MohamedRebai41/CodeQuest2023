@@ -1,4 +1,4 @@
-# Problem K : Cloning Fruit
+# Problem K : Clone Fruit
 
 ## Statement:
 
