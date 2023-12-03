@@ -1,41 +1,62 @@
-# Problem A : Image classification
+
+# Problem : Blood Transfusion
 
 ## Statement:
 
+Chopper is the doctor of the Straw Hat pirates. After the big war at the country of wano, there are **n** injured people that need a blood transfusion. 
 
+Chopper is determined to save everyone, so he rounds up **n** donors.
+Each person has a specific blood type $A$, $B$, $AB$ or  $O$.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-**This text is in bold**
+There are certain rules to the blood transfusion operations:
+ - A donor can only donate to one injured person
+ -  Blood type  $A$  donors can only donate to recipients with blood types  $A$  and  $AB$.
+-   Blood type  $B$  donors can only  donate to recipients with blood types  $B$  and  $AB$.
+-   Blood type  $AB$  donors can only donate to recipients with blood type  $AB$  only.
+-   Blood type  $O$  donors can  donate to recipients with blood types  $A$, $B$, $AB$ and $O$. 
 
-  - Lorem Ipsum dolor sit amet
-
+Help chopper figure out if he can save every injured person using the donors.
 
 ## Input :
-The first line contains a single integer **T** (1≤T≤100) — the number of test cases. Then the test cases follow. Each test case consists of one line.
 
-The first line contains two integers **n**, **m** (1≤n, m≤100)
+The first line contains T $(1\leq T \leq 100)$ , the number of testaces.
 
-Each of the next n lines ...
+The first line of each testcase contains n $(1\leq n \leq 2*10^6)$ the number of injured people
 
+The second line of each testcase containe **n** space separated strings denoting the blood types of the injured people
+
+The third line of each testcase contains **n** space separated strings denoting the blood types of the donors
+
+**It is guaranteed that the sum of n over all the testcases does not exceed 2*10^6** 
 ## Output :
-For each test case, output ....
+For each query, output **"YES"**(without quotes) if the injured people can be saved and **"NO"**(without quotes) otherwise.
 
 ## Example:
 Input :  
 
 ```
-4
-4 5 6 7
-1 2 34 5
-49 45 12 10
-1 1 1 1
+3
+2
+A A
+A B
+5
+A B AB O A
+O O O O O
+5
+A A A B AB
+O O B B B
 ```
 
 Output :  
 
 ```
-Yes
-Yes
-No 
-Yes
+NO
+YES
+NO
 ```
+## Note:
+In the first test case, we can only save one person of blood type A.
+
+In the second testcase, every person can receive a donation from an O donor
+
+In the third testcase, we can only save two people of blood type A.
