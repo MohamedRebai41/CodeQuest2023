@@ -1,7 +1,7 @@
 # Problem B : The Switch Game
 
 ## Statement:
-Luffy and Zoro are engaged in a strategic number swapping game. The game involves two numbers, $A$ and  $B$, each of length $n$. In each turn, the players will perform actions based on the values of digits of the numbers denoted by $a_i$ and $b_i$ ($1 \leq i \leq n$).
+Monkey D. Luffy and Roronoa Zoro are engaged in a strategic number swapping game. The game involves two numbers, $A$ and  $B$, each of length $n$. In each turn, the players will perform actions based on the values of digits of the numbers denoted by $a_i$ and $b_i$ ($1 \leq i \leq n$).
 The rules of the game are:
 
  - Game starts at turn 1 from the left digits of $A$ and $B$.
@@ -17,12 +17,14 @@ The rules of the game are:
 Given $A$ and $B$, your task is determine the winner of the game if Luffy begins playing in the first turn and both players play optimally.  
 
 ## Input:
-The first line of input contains a single integer $A$. 
+The first line of input contains a single integer $n$ ($1 \leq n \leq 4 \times 10^6$), the number of digits of $A$ and $B$.
+
+The second line of input contains a single integer $A$.
+ 
 The second line of input contains a single integer $B$.
-Numbers $A$ and $B$ have the **same** number of digits $n$ ($1 \leq n \leq 4 \times 10^6$).
 
 ## Output:
-Print a single line containing "**Luffy**" if Luffy wins or "**Zoro**" if Zoro wins. 
+Print a single line containing "**Luffy**" if Alice wins or "**Zoro**" if Bob wins. 
 
 ## Example:
 input:
