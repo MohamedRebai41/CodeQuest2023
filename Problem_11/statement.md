@@ -2,19 +2,26 @@
 
 ## Statement:
 
-In One Piece world, there exists a remarkable tree known as the Cloning Tree. This tree bears a fruit "The Cloning Fruit" with a magical effect, duplicating every person who consumes it.
-In the queue for the "Cloning Tree", **m** nakama (friends) await their turn. The first person in the queue, denoted as Luffy for example, consumes a fruit and duplicates. The resulting two Luffys move to the end of the queue. Subsequently, each person who consumes a fruit undergoes the same process, creating an **infinite** doubling cycle.
+Kaido, one of the four emperors of the sea, would like to build a huge army in order to obtain the one piece.
 
-For example, if the initial queue consists of 5 people (Luffy, Nami, Zoro, Sanji, Brook), and Zoro consumes the third Cloning Fruit, the updated queue becomes: Sanji, Brook, Luffy, Luffy, Nami, Nami, Zoro, Zoro.
+He first acquired a huge number of Clone Fruits: These fruits, like the name indicates, have the unique ability to clone a person
 
-Write a program to determine the name of the person who consumes the **n-th** cloning fruit.
+Then, he chose **m** of his best crewmates and started cloning them as follows:
+- At first the crewmates stand in a queue
+- Each time a crewmate is cloned, the two resulting persons rejoin the end of the queue
+
+Kaido would like to keep track of the person that ate the **n-th** fruit. Help him figure this out.
+
 
 ## Input :
 
 The first line contains a single integer**n** $(1≤n≤10^9)$ representing the mentioned **n**.
-The second line contains a single integer **m** $(1≤n≤1000)$ indicating the initial number of people in the queue.
-The next **m** lines contains the names of the m individuals with the i-th line representing the name of the i-th person.
-**It is guaranteed that the length of all names does not exceed 10**.
+
+The second line contains a single integer **m** $(1≤m≤1000)$ indicating the initial number of people in the queue.
+
+The next **m** lines contains the names of the m individuals with the i-th line representing the name of the i-th person
+
+**It is guaranteed that the length of the names does not exceed 10** 
 
 ## Output :
 
@@ -27,17 +34,17 @@ Input :
 ```
 3
 5
-luffy
-nami
-zoro
-sanji
-brook
+King
+Queen
+Jack
+Ulti
+Sasaki
 ```
 
 Output :
 
 ```
-zoro
+Jack
 ```
 
 Input :
@@ -45,13 +52,13 @@ Input :
 ```
 20
 3
-luffy
-nami
-zoro
+King
+Queen
+Jack
 ```
 
 Output :
 
 ```
-zoro
+Jack
 ```
