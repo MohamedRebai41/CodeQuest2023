@@ -15,7 +15,7 @@ There are certain rules to the blood transfusion operations:
 -   Blood type  $AB$  donors can only donate to recipients with blood type  $AB$  only.
 -   Blood type  $O$  donors can  donate to recipients with blood types  $A$, $B$, $AB$ and $O$. 
 
-Help chopper figure out if he can save every injured person using the donors.
+Help chopper figure out if he can save every injured person using the donors he picked.
 
 ## Input :
 
@@ -27,7 +27,7 @@ The second line of each testcase containe **n** space separated strings denoting
 
 The third line of each testcase contains **n** space separated strings denoting the blood types of the donors
 
-**It is guaranteed that the sum of n over all the testcases does not exceed 2*10^6** 
+**It is guaranteed that the sum of n over all the testcases does not exceed $2*10^6$** 
 ## Output :
 For each query, output **"YES"**(without quotes) if the injured people can be saved and **"NO"**(without quotes) otherwise.
 
