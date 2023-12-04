@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hidden Treasures</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet" />
+    <link rel="stylesheet" href="./statmentStyle.css" />
+  </head>
+
+  <body
+    class="stackedit"
+    style="
+      background-image: url('../statmentBG.png');
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: center !important;
+    "
+  >
+    <div class="stackedit__html">
+      <h1 id="problem-name">Problem A : Hidden Treasures</h1>
+      <p class="const">
+        time limit per test: 1 second <br />
+        memory limit per test: 256 megabytes <br />
+        input: standard input <br />
+        output: standard output
+      </p>
+      <p>
+        Nami is the navigator of the Straw Hat Pirates in “One Piece”, and one
+        of her primary skills is cartography.
+      </p>
+      <p>
+        She has recently drawn a map for her team, this map is a matrix of
+        dimensions <strong>n×m</strong>, where <strong>n</strong> and
+        <strong>m</strong> denote the number of rows and columns respectively,
+        composed of integers. This matrix serves as a guide to predict positions
+        of hidden treasures.
+      </p>
+      <p>The diagonals of a matrix are defined as follows:</p>
+      <ul>
+        <li>
+          <p>
+            <strong>Main diagonal</strong>: diagonal starting from element (1,
+            1) and passing through elements (d, d) for 1≤d≤min(n, m).
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>Upper diagonals</strong>: diagonals starting from elements
+            (1, 1+d) and passing through elements (k, k+d) for 1≤k≤n, 1≤d&lt;m,
+            k+d&lt;m.
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>Lower diagonals</strong> : diagonals starting from elements
+            (1+d, 1) and passing through elements (k+d, k) for 1≤k≤m, 1≤d&lt;n,
+            k+d≤n.
+          </p>
+        </li>
+      </ul>
+      <p>Each element is then part of only one diagonal.</p>
+      <p>
+        The diagram below illustrates the diagonals of a
+        <strong>3×4</strong> matrix:
+      </p>
+      <div
+        style="
+          font-weight: 700;
+          text-align: center;
+          width: 100%;
+          margin-top: 5px;
+          margin-bottom: 5px;
+        "
+      >
+        <table style="margin: auto">
+          <tr>
+            <td style="background-color: grey">1</td>
+            <td style="background-color: lightgrey">2</td>
+            <td style="background-color: grey">3</td>
+            <td style="background-color: lightgrey">4</td>
+          </tr>
+          <tr>
+            <td style="background-color: lightgrey">5</td>
+            <td style="background-color: grey">6</td>
+            <td style="background-color: lightgrey">7</td>
+            <td style="background-color: grey">8</td>
+          </tr>
+          <tr>
+            <td style="background-color: grey">9</td>
+            <td style="background-color: lightgrey">10</td>
+            <td style="background-color: grey">11</td>
+            <td style="background-color: lightgrey">12</td>
+          </tr>
+        </table>
+      </div>
+      <p>
+        (Elements 1, 6 and 11 make a diagonal, Element 4 makes a diagonal by
+        itself too…)
+      </p>
+      <p>
+        A element of position <strong>(x, y)</strong> contains a treasure if and
+        only if it divides the diagonal into two parts with equal sum. In other
+        words, the sum the elements above our element in the diagonal is equal
+        to the sum of elements under our element in the diagonal.
+      </p>
+      <p>
+        <br />More formally
+        <strong
+          >Σ<sub>elements(i, j)∈diagonal containing(x, y) | i&lt;x, j&lt;y</sub>
+          M[i][j] = Σ<sub
+            >elements(i’, j’)∈diagonal containing(x, y) | x&lt;i’, y&lt;j’</sub
+          >
+          M[i’][j’]</strong
+        >.
+      </p>
+      <p>
+        You will be given the matrix, and q queries, for each query you will be
+        given a position <strong>(x, y)</strong>
+      </p>
+      <p>
+        Output <strong>“YES”</strong> if that position contains a treasure, and
+        <strong>“NO”</strong> otherwise.
+      </p>
+      <h2 id="input-">Input :</h2>
+      <p>
+        The first line contains 3 integers <strong>n</strong>,
+        <strong>m</strong> (2≤n, m≤2×10<sup>3</sup>), number of rows and number
+        of columns of our matrix respectively and <strong>q</strong> queries
+        (1≤q≤4×10<sup>6</sup>).
+      </p>
+      <p>
+        The next n lines each contain m integers seperated by spaces describing
+        rows of the matrix. Each integer of the matrix
+        <strong>a<sub>i,j</sub></strong> ∈ [-10<sup>9</sup>, 10<sup>9</sup>].
+      </p>
+      <p>
+        The next q lines each contain 2 integers <strong>x</strong> and
+        <strong>y</strong> (1≤x≤n, 1≤y≤m), a specific row and column of our
+        matrix respectively.
+      </p>
+      <h2 id="output-">Output :</h2>
+      <p>
+        For each query, output <strong>“YES”</strong>(without quotes) if the
+        position <strong>(x, y)</strong> can contain a treasure, and
+        <strong>“NO”</strong>(without quotes) otherwise.
+      </p>
+    </div>
+  </body>
+</html>

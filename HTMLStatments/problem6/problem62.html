@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hidden Treasures</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet" />
+    <link rel="stylesheet" href="./statmentStyle.css" />
+  </head>
+
+  <body
+    class="stackedit"
+    style="
+      background-image: url('../statmentBG.png');
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: center !important;
+    "
+  >
+    <div class="stackedit__html" style="margin-left: 15px; margin-right: 15px">
+      <h2 id="example">Example:</h2>
+      <p>Input :</p>
+      <pre><code>
+4 4 4
+9 4 7 8
+6 5 0 3
+11 4 2 5
+10 3 8 14
+1 4
+3 3 
+3 2
+4 2
+
+</code></pre>
+      <p>Output :</p>
+      <pre><code>
+YES
+YES
+NO
+NO
+
+</code></pre>
+      <h2 id="note">Note:</h2>
+      <div
+        style="
+          font-weight: 700;
+          text-align: center;
+          width: 100%;
+          margin-top: 5px;
+          margin-bottom: 5px;
+        "
+      >
+        <table style="margin: auto">
+          <tr>
+            <td>9</td>
+            <td>4</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>5</td>
+            <td>0</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>4</td>
+            <td>2</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>3</td>
+            <td>8</td>
+            <td>14</td>
+          </tr>
+        </table>
+      </div>
+      <p>
+        In the <strong>first</strong> query the answer is YES because both sum
+        are equal to 0 (there are no elements in the upper or lower part of the
+        diagonal). <br />In the <strong>second</strong> query the answer is YES
+        because: 9 + 5 <strong>=</strong> 14. (m[1][1] + m[2][2] = 14 and
+        m[4][4] = 14) <br />In the <strong>third</strong> query the answer is NO
+        because: m[2][1] = 6
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo mathvariant="normal">≠</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex">\neq</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.88888em; vertical-align: -0.19444em"
+                ></span
+                ><span class="mrel"
+                  ><span class="mrel"
+                    ><span class="mord vbox"
+                      ><span class="thinbox"
+                        ><span class="rlap"
+                          ><span
+                            class="strut"
+                            style="
+                              height: 0.88888em;
+                              vertical-align: -0.19444em;
+                            "
+                          ></span
+                          ><span class="inner"
+                            ><span class="mord"
+                              ><span class="mrel"></span></span
+                            ></span
+                          ><span class="fix"></span></span></span></span></span
+                  ><span class="mrel">=</span></span
+                ></span
+              ></span
+            ></span
+          ></span
+        >
+        m[4][3] = 8.
+        <br />In the <strong>fourth</strong> query the answer is NO bcause:
+        m[3][1] = 11
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo mathvariant="normal">≠</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex">\neq</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.88888em; vertical-align: -0.19444em"
+                ></span
+                ><span class="mrel"
+                  ><span class="mrel"
+                    ><span class="mord vbox"
+                      ><span class="thinbox"
+                        ><span class="rlap"
+                          ><span
+                            class="strut"
+                            style="
+                              height: 0.88888em;
+                              vertical-align: -0.19444em;
+                            "
+                          ></span
+                          ><span class="inner"
+                            ><span class="mord"
+                              ><span class="mrel"></span></span
+                            ></span
+                          ><span class="fix"></span></span></span></span></span
+                  ><span class="mrel">=</span></span
+                ></span
+              ></span
+            ></span
+          ></span
+        >
+        0 (there are no elements in the lower part of the diagonal).
+      </p>
+    </div>
+  </body>
+</html>
