@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Transfusion</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet" />
+    <link rel="stylesheet" href="./statmentStyle.css" />
+  </head>
+
+  <body
+    class="stackedit"
+    style="
+      background-image: url('../statmentBG.png');
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: center !important;
+    "
+  >
+    <div class="stackedit__html">
+      <h1 id="problem-name">Problem Z: Blood Transfusion (hard version)</h1>
+      <p class="const">
+        time limit per test: 1 second <br />
+        memory limit per test: 256 megabytes <br />
+        input: standard input <br />
+        output: standard output
+      </p>
+      <p>
+        Chopper is the doctor of the Straw Hat pirates. After the big war at the
+        country of wano, there are <strong>n</strong> injured people that need a
+        blood transfusion.
+      </p>
+      <p>
+        Chopper is determined to save everyone, so he rounds up
+        <strong>n</strong> donors.
+      </p>
+      <p>
+        However, in the vast world of One Piece, there are many races and more
+        blood types than those of the human world. Also, the rules of
+        compatibility between blood types are different.
+      </p>
+      <p>There are certain rules to the blood transfusion operations:</p>
+      <ul>
+        <li>A donor can only donate to one injured person.</li>
+        <li>A donor can donate blood to a person of the same blood type</li>
+        <li>
+          The blood types are denoted by uppercase english letters and the
+          relations between them are denoted by <strong>m</strong> couples
+          <strong>(x,y)</strong>
+          <span class="katex--inline"
+            ><span class="katex"
+              ><span class="katex-mathml"
+                ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><semantics
+                    ><mrow
+                      ><mo stretchy="false">(</mo><mi>x</mi
+                      ><mo mathvariant="normal">≠</mo><mi>y</mi
+                      ><mo stretchy="false">)</mo></mrow
+                    ><annotation encoding="application/x-tex"
+                      >(x\neq y)</annotation
+                    ></semantics
+                  ></math
+                ></span
+              ><span class="katex-html" aria-hidden="true"
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 1em; vertical-align: -0.25em"
+                  ></span
+                  ><span class="mopen">(</span
+                  ><span class="mord mathnormal">x</span
+                  ><span class="mspace" style="margin-right: 0.277778em"></span
+                  ><span class="mrel"
+                    ><span class="mrel"
+                      ><span class="mord vbox"
+                        ><span class="thinbox"
+                          ><span class="rlap"
+                            ><span
+                              class="strut"
+                              style="
+                                height: 0.88888em;
+                                vertical-align: -0.19444em;
+                              "
+                            ></span
+                            ><span class="inner"
+                              ><span class="mord"
+                                ><span class="mrel"></span></span
+                              ></span
+                            ><span
+                              class="fix"
+                            ></span></span></span></span></span
+                    ><span class="mrel">=</span></span
+                  ><span
+                    class="mspace"
+                    style="margin-right: 0.277778em"
+                  ></span></span
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 1em; vertical-align: -0.25em"
+                  ></span
+                  ><span class="mord mathnormal" style="margin-right: 0.03588em"
+                    >y</span
+                  ><span class="mclose">)</span></span
+                ></span
+              ></span
+            ></span
+          >
+          which represent the fact that a person with blood type
+          <strong>x</strong> can donate to a person of blood type
+          <strong>y</strong>
+        </li>
+      </ul>
+      <p>
+        Help chopper figure out if he can save every injured person using the
+        donors he picked.
+      </p>
+      <h2 id="input-">Input :</h2>
+      <p>
+        The first line contains two space separated integers
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                ><semantics
+                  ><mrow><mi>n</mi></mrow
+                  ><annotation encoding="application/x-tex"
+                    >n</annotation
+                  ></semantics
+                ></math
+              ></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.43056em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal">n</span></span
+              ></span
+            ></span
+          ></span
+        >
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                ><semantics
+                  ><mrow
+                    ><mo stretchy="false">(</mo><mn>1</mn><mo>≤</mo><mi>n</mi
+                    ><mo>≤</mo><mn>100</mn><mo stretchy="false">)</mo></mrow
+                  ><annotation encoding="application/x-tex"
+                    >(1\leq n \leq 100)</annotation
+                  ></semantics
+                ></math
+              ></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">1</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.77194em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord mathnormal">n</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">100</span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >
+        and
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                ><semantics
+                  ><mrow><mi>m</mi></mrow
+                  ><annotation encoding="application/x-tex"
+                    >m</annotation
+                  ></semantics
+                ></math
+              ></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.43056em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal">m</span></span
+              ></span
+            ></span
+          ></span
+        >
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                ><semantics
+                  ><mrow
+                    ><mo stretchy="false">(</mo><mn>0</mn><mo>≤</mo><mi>m</mi
+                    ><mo>≤</mo><mn>650</mn><mo stretchy="false">)</mo></mrow
+                  ><annotation encoding="application/x-tex"
+                    >(0\leq m \leq 650)</annotation
+                  ></semantics
+                ></math
+              ></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">0</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.77194em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord mathnormal">m</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">650</span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >
+        the number of injured people and the number of relations between the
+        different blood types<br />
+        The second line of each testcase contains <strong>n</strong> space
+        separated strings denoting the blood types of the injured people<br />
+        The third line of each testcase contains <strong>n</strong> space
+        separated strings denoting the blood types of the donors<br />
+        The next <strong>m</strong> lines each contains two distinct, space
+        separated uppercase english characters denoting the relations between
+        the blood types.
+      </p>
+      <h2 id="output-">Output :</h2>
+      <p>
+        For each query, output <strong>“YES”</strong> (without quotes) if the
+        injured people can be saved and <strong>“NO”</strong> (without quotes)
+        otherwise.
+      </p>
+      <h2 id="example">Example:</h2>
+      <p>Input :</p>
+      <pre><code>5 4
+A B C Z A
+A I O C O
+O B
+O Z
+I A
+Y X
+</code></pre>
+      <p>Output :</p>
+      <pre><code>YES
+</code></pre>
+      <h2 id="note">Note:</h2>
+      <p>
+        One possible solution in the testcase: A donates to A, I donates to A, O
+        donates to B, O donates to Z, C donates to C
+      </p>
+    </div>
+  </body>
+</html>
