@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clone Fruit</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <link rel="stylesheet" href="./statmentStyle.css" />
+    <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet" />
+  </head>
+
+  <body
+    class="stackedit"
+    style="
+      background-image: url('./statmentBG.png');
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: center !important;
+    "
+  >
+    <div class="stackedit__html">
+      <h1 id="problem-name">Problem K : Clone Fruit</h1>
+      <p class="const">
+        time limit per test: 1 second <br />
+        memory limit per test: 256 megabytes <br />
+        input: standard input <br />
+        output: standard output <br />
+        Balloon color : blue
+      </p>
+      <p>
+        Kaido, one of the four emperors of the sea, would like to build a huge
+        army in order to obtain the one piece.
+      <br>
+        He first acquired a huge number of Clone Fruits: These fruits, like the
+        name indicates, have the unique ability to clone a person
+      <br>
+        Then, he chose <strong>m</strong> of his best crewmates and started
+        cloning them as follows:
+      <ul>
+        <li>
+          <p>At first the crewmates stand in a queue</p>
+        </li>
+        <li>
+            Each time a crewmate is cloned, the two resulting persons rejoin the
+            end of the queue
+        </li>
+      </ul>
+        Kaido would like to keep track of the person that ate the
+        <strong>n-th</strong> fruit. Help him figure this out.
+      </p>
+      <h2 id="input-">Input :</h2>
+      <p>
+        The first line contains a single integer<strong>n</strong>
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>1</mn>
+                    <mo>≤</mo>
+                    <mi>n</mi>
+                    <mo>≤</mo>
+                    <mn>1</mn>
+                    <msup>
+                      <mn>0</mn>
+                      <mn>9</mn>
+                    </msup>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >(1≤n≤10^9)</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">1</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.77194em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord mathnormal">n</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1.06411em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">1</span
+                ><span class="mord"
+                  ><span class="mord">0</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.814108em"
+                          ><span
+                            class=""
+                            style="top: -3.063em; margin-right: 0.05em"
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight">9</span></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >
+        representing the mentioned <strong>n</strong>.
+      <br>
+        The second line contains a single integer <strong>m</strong>
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>1</mn>
+                    <mo>≤</mo>
+                    <mi>m</mi>
+                    <mo>≤</mo>
+                    <mn>1000</mn>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >(1≤m≤1000)</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">1</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.77194em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord mathnormal">m</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">1000</span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >
+        indicating the initial number of people in the queue.
+     <br>
+        The next <strong>m</strong> lines contains the names of the m
+        individuals with the i-th line representing the name of the i-th person
+      <br>
+        <strong
+          >It is guaranteed that the length of the names does not exceed
+          10</strong
+        >
+      </p>
+      <h2 id="output-">Output :</h2>
+      <p>
+        For each test case, output a single line —
+        <strong
+          >the name of the person who consumes the n-th cloning fruit</strong
+        >. The fruits are numbered starting from 1.
+      </p>
+      <h2 id="example">Example:</h2>
+      <p>Input :</p>
+      <pre><code>
+3
+5
+King
+Queen
+Jack
+Ulti
+Sasaki
+
+</code></pre>
+      <p>Output :</p>
+      <pre><code>
+Jack
+
+</code></pre>
+      <p>Input :</p>
+      <pre><code>
+20
+3
+King
+Queen
+Jack
+
+</code></pre>
+      <p>Output :</p>
+      <pre><code>
+Jack
+
+</code></pre>
+    </div>
+  </body>
+</html>
