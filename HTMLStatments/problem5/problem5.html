@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currensea</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet" />
+    <link rel="stylesheet" href="./statmentStyle.css" />
+  </head>
+
+  <body
+    class="stackedit"
+    style="
+      background-image: url('../statmentBG.png');
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: center !important;
+    "
+  >
+    <div class="stackedit__html">
+      <h1 id="problem-name">Problem D: Currensea</h1>
+      <p class="const">
+        time limit per test: 1 second <br />
+        memory limit per test: 256 megabytes <br />
+        input: standard input <br />
+        output: standard output
+      </p>
+      <p>
+        The world of one piece is vast and contains numerous mystical islands.
+        One such island is “Currensea”: an island where its only currency are
+        coins with values (11, 111, 1111, …).
+      </p>
+      <p>
+        Upon arrival on this island, Nami wants to sell her new jewelry she
+        acquired in Skypeia but doesn’t know how to price her goods.
+      </p>
+      <p>
+        She wants to know, if it’s possible to price her jewelry to some integer
+        <strong>n</strong> so that it can be bought using this island’s unique
+        currency?
+      </p>
+      <p>
+        <strong
+          >Note that you can use any coin any number of times to buy
+          something.</strong
+        >
+      </p>
+      <h2 id="input-">Input :</h2>
+      <p>
+        The first line contains a single integer <strong>T</strong>
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>1</mn>
+                    <mo>≤</mo>
+                    <mi>T</mi>
+                    <mo>≤</mo>
+                    <mn>1000</mn>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >(1≤T≤1000)</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">1</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.8193em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord mathnormal" style="margin-right: 0.13889em"
+                  >T</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">1000</span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >
+        — the number of test cases. Then the test cases follow.
+      </p>
+      <p>
+        Each test case consists of one line. the integer <strong>n</strong>
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>0</mn>
+                    <mo>≤</mo>
+                    <mi>n</mi>
+                    <mo>≤</mo>
+                    <mn>1</mn>
+                    <msup>
+                      <mn>0</mn>
+                      <mn>9</mn>
+                    </msup>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >(0≤n≤10^9)</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">0</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.77194em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord mathnormal">n</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1.06411em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">1</span
+                ><span class="mord"
+                  ><span class="mord">0</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.814108em"
+                          ><span
+                            class=""
+                            style="top: -3.063em; margin-right: 0.05em"
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight">9</span></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >
+      </p>
+      <h2 id="output-">Output :</h2>
+      <p>
+        For each testcase, you should output a single string. If you can buy n
+        using the island’s currency, output “YES” (without quotes). Otherwise,
+        output “NO”.
+      </p>
+      <h2 id="example">Example:</h2>
+      <p>Input :</p>
+      <pre><code>
+3
+
+55
+
+1122
+
+150
+
+</code></pre>
+      <p>Output :</p>
+      <pre><code>
+Yes
+
+Yes
+
+No
+
+</code></pre>
+      <h2 id="explanation">Explanation</h2>
+      <ul>
+        <li>
+          <p>55 = 5*11</p>
+        </li>
+        <li>
+          <p>1122 = 11 + 1111</p>
+        </li>
+        <li>
+          <p>
+            It can be proved that 150 can’t be written as the sum of
+            <span class="katex--inline"
+              ><span class="katex"
+                ><span class="katex-mathml"
+                  ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mn>11</mn>
+                        <mi>a</mi>
+                        <mo>+</mo>
+                        <mn>111</mn>
+                        <mi>b</mi>
+                        <mo>+</mo>
+                        <mn>1111</mn>
+                        <mi>c</mi>
+                        <mo>+</mo>
+                        <mn>11111</mn>
+                        <mi>d</mi>
+                        <mo>+</mo>
+                        <mi mathvariant="normal">.</mi>
+                        <mi mathvariant="normal">.</mi>
+                        <mi mathvariant="normal">.</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex"
+                        >11a + 111b + 1111c + 11111d + ...
+                      </annotation>
+                    </semantics>
+                  </math></span
+                ><span class="katex-html" aria-hidden="true"
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.72777em; vertical-align: -0.08333em"
+                    ></span
+                    ><span class="mord">11</span
+                    ><span class="mord mathnormal">a</span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.222222em"
+                    ></span
+                    ><span class="mbin">+</span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.222222em"
+                    ></span></span
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.77777em; vertical-align: -0.08333em"
+                    ></span
+                    ><span class="mord">111</span
+                    ><span class="mord mathnormal">b</span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.222222em"
+                    ></span
+                    ><span class="mbin">+</span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.222222em"
+                    ></span></span
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.72777em; vertical-align: -0.08333em"
+                    ></span
+                    ><span class="mord">1111</span
+                    ><span class="mord mathnormal">c</span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.222222em"
+                    ></span
+                    ><span class="mbin">+</span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.222222em"
+                    ></span></span
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.77777em; vertical-align: -0.08333em"
+                    ></span
+                    ><span class="mord">11111</span
+                    ><span class="mord mathnormal">d</span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.222222em"
+                    ></span
+                    ><span class="mbin">+</span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.222222em"
+                    ></span></span
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.10556em; vertical-align: 0em"
+                    ></span
+                    ><span class="mord">...</span></span
+                  ></span
+                ></span
+              ></span
+            >
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
