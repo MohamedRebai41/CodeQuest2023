@@ -8,7 +8,9 @@ public class AC_solution {
         scanner.nextLine();
 
         while (t-- > 0) {
+            
             int n = scanner.nextInt();
+            scanner.nextLine();
             String s = scanner.nextLine();
             int ans = 0;
             int lastOne = -1, firstZero = n;
