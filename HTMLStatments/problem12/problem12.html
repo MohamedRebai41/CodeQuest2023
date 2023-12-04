@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bounty Challenge</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet" />
+    <link rel="stylesheet" href="./statmentStyle.css" />
+  </head>
+
+  <body
+    class="stackedit"
+    style="
+      background-image: url('../statmentBG.png');
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: center !important;
+    "
+  >
+    <div class="stackedit__html">
+      <h1 id="problem-name">Problem L: Bounty Challenge</h1>
+      <p class="const">
+        time limit per test: 1 second <br />
+        memory limit per test: 256 megabytes <br />
+        input: standard input <br />
+        output: standard output
+      </p>
+      <p>
+        Trafalgar Law, captain of the heart pirates, is facing a bit of a
+        problem. In front of him there exists <strong>n</strong> strong enemies
+        that he needs to fight. If the value of his current bounty is greater or
+        equal than the strength of his enemy then he can win the fight,
+        otherwise he will choose to run away.<br />
+        The problem is that, with every fight he wins, his bounty will increase
+        by a 100 and if his bounty exceeds the value <strong>L</strong> then
+        Kizaru, one of the strongest fighters in the marine will be dispatched
+        to get rid of him.
+        <br />
+        Given the number of fights <em>n</em>, the maximum allowable bounty
+        <em>L</em> and an array of integers <em>fights</em> representing the
+        strengh of the opponents, the procedure for simulating the fights is as
+        follows:
+        <br />
+        <em>1.</em> Start with an initial bounty <em>B</em>
+        <br />
+        <em>2.</em> For each fight; if the current bounty is greater or equal
+        than the strength of the opponent <em>fights<sub>i</sub></em>
+        <em>(1&lt;=i&lt;=n)</em>, add 100 to the current bounty.
+        <br />
+        Your objective is to find the maximum initial bounty <em>B</em> such
+        that after all the fights, the final bounty is less than or equal to
+        <em>L</em>.
+      </p>
+      <h2 id="input-">Input :</h2>
+      <p>
+        The first line of the input contains integers <em>n</em> and <em>L</em>
+        <em>(1&lt;=n&lt;=10<sup>5</sup>, 0&lt;=L&lt;=10<sup>18</sup>)</em>, the
+        number of fights, and the maximum allowable bounty respectively.
+        <br />
+        The second line of the input contains <em>n</em> space-separated
+        integers <em>fights<sub>i</sub></em
+        >, the strength of the <em>i-th</em> opponents.
+        <em>(1&lt;=fights<sub>i</sub> &lt;= 10<sup>9</sup>)</em>
+      </p>
+      <h2 id="output-">Output :</h2>
+      <p>
+        Print a single integer, the maximum initial bounty <em>B</em> such that
+        after all the fights, the final bounty is less than or equal to
+        <em>L</em>.
+      </p>
+      <h2 id="example">Example:</h2>
+      <p>Input :</p>
+      <pre><code>5 700
+300 200 500 100 700
+</code></pre>
+      <p>Output :</p>
+      <pre><code>300 
+</code></pre>
+      <p>Input :</p>
+      <pre><code>4 500
+700 200 300 100
+</code></pre>
+      <p>Output :</p>
+      <pre><code>200
+</code></pre>
+      <h2 id="explanation">Note:</h2>
+      <p>First example:</p>
+      <p>
+        For initial bounty <em>B</em> = 300, the bounty will change as follows :
+        300 -&gt; 300 -&gt; 400 -&gt; 400 -&gt; 500 -&gt; 500, thus the final
+        bounty is less than L.
+      </p>
+      <p>
+        If <em>B</em> = 301, we will have: 301 -&gt; 401 -&gt; 501 -&gt; 601
+        -&gt; 701 -&gt; 801, and the final bounty is greater than L.
+      </p>
+      <p><em>B</em> = 300 is then the maximum initial bounty.</p>
+    </div>
+  </body>
+</html>
