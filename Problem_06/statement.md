@@ -43,7 +43,7 @@ The diagram below illustrates the diagonals of a **3×4** matrix:
 
 (Elements 1, 6 and 11 make a diagonal, Element 4 makes a diagonal by itself too...)
 
-A element of position **(x, y)** contains a treasure if and only if it divides the diagonal into two parts with equal sum. In other words, the sum the elements above our element in the diagonal is equal to the sum of elements under our element in the diagonal.
+An element of position **(x, y)** contains a treasure if and only if it divides the diagonal into two parts with equal sum. In other words, the sum the elements above our element in the diagonal is equal to the sum of elements under our element in the diagonal.
 
 <br>More formally **&Sigma;<sub>elements(i, j)∈diagonal containing(x, y) | i<x, j<y</sub> M[i][j] = &Sigma;<sub>elements(i', j')∈diagonal containing(x, y) | x<i', y<j'</sub> M[i'][j']**.
 
@@ -54,7 +54,7 @@ Output **"YES"** if that position contains a treasure, and **"NO"** otherwise.
 
 
 ## Input :
-The first line contains 3 integers **n**, **m** (2≤n, m≤2×10<sup>3</sup>), number of rows and number of columns of our matrix respectively and **q** queries (1≤q≤4×10<sup>6</sup>).
+The first line contains 3 integers **n**, **m** (2≤n, m≤10<sup>3</sup>), number of rows and number of columns of our matrix respectively and **q** queries (1≤q≤10<sup>6</sup>).
 
 The next n lines each contain m integers seperated by spaces describing rows of the matrix. Each integer of the matrix **a<sub>i,j</sub>** &isin; [-10<sup>9</sup>, 10<sup>9</sup>].
 
