@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stolen necklace</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <link rel="stylesheet" href="./statmentStyle.css" />
+    <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet" />
+  </head>
+
+  <body
+    class="stackedit"
+    style="
+      background-image: url('./statmentBG.png');
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: center !important;
+    "
+  >
+    <div class="stackedit__html">
+      <h1 id="problem-c--stolen-necklace">Problem C : Stolen necklace</h1>
+      <p class="const">
+        time limit per test: 1 second <br />
+        memory limit per test: 1024 megabytes <br />
+        input: standard input <br />
+        output: standard output <br />
+        Balloon color : Red
+      </p>
+      <p>
+        Nami, recently acquired a priceless necklace. Eager to share her new
+        treasure,She invited her <strong>n</strong> friends to The Going Merry
+        (the straw hats’ pirate ship) , where she proudly displayed the
+        necklace.
+        <br />
+        The friends, <strong>one by one</strong>, entered and exited the room.
+        At no point were there more than one friend in the room. In other words,
+        the first friend entered and left first, then the second, and so on.
+        <br />
+        At the beginning (before any friend visited),
+        <strong>the necklace was in the room</strong>.However, by the end (after
+        the n-th friend), <strong>the map mysteriously vanished</strong>.The
+        exact moment of disappearance remains shrouded in uncertainty.
+        <br />
+        Determined to identify the culprit, Nami questioned her friends one by
+        one in the same order they visited the room. Each friend was asked if
+        the map was still there when they entered. Each friend answered using
+        one of three answers:
+      </p>
+      <ul>
+        <li>No (represented with <strong>0</strong>)</li>
+        <li>Yes (represented with <strong>1</strong>)</li>
+        <li>Can’t remember (represented with <strong>?</strong>)</li>
+      </ul>
+      <p>
+        Everyone except the thief either couldn’t remember or
+        <strong>told the truth</strong>. The thief, however,
+        <strong>can say anything</strong> (any of the three options).
+        <br />
+        Nami cannot find who the thief is. She asks you to find out
+        <strong>the number of potential suspects</strong> according to the
+        answers of her friends.
+      </p>
+      <h3 id="input-">Input :</h3>
+      <p>
+        The first line contains a single integer <strong>T</strong>
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>1</mn>
+                    <mo>≤</mo>
+                    <mi>T</mi>
+                    <mo>≤</mo>
+                    <mn>1</mn>
+                    <msup>
+                      <mn>0</mn>
+                      <mn>4</mn>
+                    </msup>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >(1≤T≤10^4)</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">1</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.8193em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord mathnormal" style="margin-right: 0.13889em"
+                  >T</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1.06411em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">1</span
+                ><span class="mord"
+                  ><span class="mord">0</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.814108em"
+                          ><span
+                            class=""
+                            style="top: -3.063em; margin-right: 0.05em"
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight">4</span></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >
+        — the number of test cases. Then the test cases follow. Each test case
+        consists of two lines.
+      </p>
+      <p>
+        For each test case:
+        <br />
+        The first line contains a single integer <strong>n</strong>
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>1</mn>
+                    <mo>≤</mo>
+                    <mi>T</mi>
+                    <mo>≤</mo>
+                    <mn>2</mn>
+                    <mo>⋅</mo>
+                    <mn>1</mn>
+                    <msup>
+                      <mn>0</mn>
+                      <mn>5</mn>
+                    </msup>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >(1≤T≤2⋅10^5)</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">1</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.8193em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord mathnormal" style="margin-right: 0.13889em"
+                  >T</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.64444em; vertical-align: 0em"
+                ></span
+                ><span class="mord">2</span
+                ><span class="mspace" style="margin-right: 0.222222em"></span
+                ><span class="mbin">⋅</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.222222em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1.06411em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">1</span
+                ><span class="mord"
+                  ><span class="mord">0</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.814108em"
+                          ><span
+                            class=""
+                            style="top: -3.063em; margin-right: 0.05em"
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight">5</span></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >
+        — the lenght of the string s that describes the friends answers.
+      </p>
+      <p>
+        The second line s describes the friends answers in the order they
+        visited the map
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>s</mi>
+                    <mi mathvariant="normal">.</mi>
+                    <mi>l</mi>
+                    <mi>e</mi>
+                    <mi>n</mi>
+                    <mi>g</mi>
+                    <mi>t</mi>
+                    <mi>h</mi>
+                    <mo>≤</mo>
+                    <mn>2</mn>
+                    <mo>⋅</mo>
+                    <mn>1</mn>
+                    <msup>
+                      <mn>0</mn>
+                      <mn>5</mn>
+                    </msup>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >(s.length ≤ 2⋅10^5)</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span
+                ><span class="mord mathnormal">s</span
+                ><span class="mord">.</span
+                ><span class="mord mathnormal" style="margin-right: 0.01968em"
+                  >l</span
+                ><span class="mord mathnormal">e</span
+                ><span class="mord mathnormal">n</span
+                ><span class="mord mathnormal" style="margin-right: 0.03588em"
+                  >g</span
+                ><span class="mord mathnormal">t</span
+                ><span class="mord mathnormal">h</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.64444em; vertical-align: 0em"
+                ></span
+                ><span class="mord">2</span
+                ><span class="mspace" style="margin-right: 0.222222em"></span
+                ><span class="mbin">⋅</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.222222em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1.06411em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">1</span
+                ><span class="mord"
+                  ><span class="mord">0</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.814108em"
+                          ><span
+                            class=""
+                            style="top: -3.063em; margin-right: 0.05em"
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight">5</span></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >, where each character
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <msub>
+                      <mi>s</mi>
+                      <mi>i</mi>
+                    </msub>
+                  </mrow>
+                  <annotation encoding="application/x-tex">s_i</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.58056em; vertical-align: -0.15em"
+                ></span
+                ><span class="mord"
+                  ><span class="mord mathnormal">s</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t vlist-t2"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.311664em"
+                          ><span
+                            class=""
+                            style="
+                              top: -2.55em;
+                              margin-left: 0em;
+                              margin-right: 0.05em;
+                            "
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mathnormal mtight"
+                                >i</span
+                              ></span
+                            ></span
+                          ></span
+                        ><span class="vlist-s">​</span></span
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.15em"
+                          ><span
+                            class=""
+                          ></span></span></span></span></span></span></span></span></span
+        ></span>
+        in the string is either 0 or 1 or ? indicates the answer of the i-th
+        friend.
+      </p>
+      <p>
+        <strong>It is guaranteed that the input is logically correct</strong>.
+        <br />
+        It is guaranteed that the sum of string lengths over the entire input
+        data set does not exceed
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mn>2</mn>
+                    <mo>⋅</mo>
+                    <mn>1</mn>
+                    <msup>
+                      <mn>0</mn>
+                      <mn>5</mn>
+                    </msup>
+                  </mrow>
+                  <annotation encoding="application/x-tex">2⋅10^5</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.64444em; vertical-align: 0em"
+                ></span
+                ><span class="mord">2</span
+                ><span class="mspace" style="margin-right: 0.222222em"></span
+                ><span class="mbin">⋅</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.222222em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.814108em; vertical-align: 0em"
+                ></span
+                ><span class="mord">1</span
+                ><span class="mord"
+                  ><span class="mord">0</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.814108em"
+                          ><span
+                            class=""
+                            style="top: -3.063em; margin-right: 0.05em"
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight">5</span></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ></span
+              ></span
+            ></span
+          ></span
+        >.
+      </p>
+      <h3 id="output-">Output :</h3>
+      <p>
+        For each test case, output a positive integer (strictly greater than
+        zero) representing the number of friends who could have stolen the
+        necklace based on the provided responses (those whom Nami could suspect
+        of stealing the necklace).
+      </p>
+      <h3 id="example">Example:</h3>
+      <p style="margin-bottom: 5px">Input :</p>
+      <pre><code style="background-color: rgb(216, 216, 216, 0.5) !important;">
+3
+7
+1110000
+8
+1?1??0?0
+4
+??11
+
+</code></pre>
+      <p>Output :</p>
+      <pre><code class="background-color: rgb(216, 216, 216, 0.5) !important;">
+2
+4
+1
+
+</code></pre>
+      <h3 id="note">Note:</h3>
+      <p>
+        In the first case, the suspects are the third and fourth friends
+        (one-indexed).It can be shown that no one else could be the thief.
+      </p>
+    </div>
+  </body>
+</html>
