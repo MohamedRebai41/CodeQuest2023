@@ -1,41 +1,64 @@
-# Problem A : Image classification
+# Problem K : Clone Fruit
 
 ## Statement:
 
+Kaido, one of the four emperors of the sea, would like to build a huge army in order to obtain the one piece.
 
+He first acquired a huge number of Clone Fruits: These fruits, like the name indicates, have the unique ability to clone a person
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-**This text is in bold**
+Then, he chose **m** of his best crewmates and started cloning them as follows:
+- At first the crewmates stand in a queue
+- Each time a crewmate is cloned, the two resulting persons rejoin the end of the queue
 
-  - Lorem Ipsum dolor sit amet
+Kaido would like to keep track of the person that ate the **n-th** fruit. Help him figure this out.
 
 
 ## Input :
-The first line contains a single integer **T** (1≤T≤100) — the number of test cases. Then the test cases follow. Each test case consists of one line.
 
-The first line contains two integers **n**, **m** (1≤n, m≤100)
+The first line contains a single integer**n** $(1≤n≤10^9)$ representing the mentioned **n**.
 
-Each of the next n lines ...
+The second line contains a single integer **m** $(1≤m≤1000)$ indicating the initial number of people in the queue.
+
+The next **m** lines contains the names of the m individuals with the i-th line representing the name of the i-th person
+
+**It is guaranteed that the length of the names does not exceed 10** 
 
 ## Output :
-For each test case, output ....
+
+For each test case, output a single line — **the name of the person who consumes the n-th cloning fruit**. The fruits are numbered starting from 1.
 
 ## Example:
-Input :  
+
+Input :
 
 ```
-4
-4 5 6 7
-1 2 34 5
-49 45 12 10
-1 1 1 1
+3
+5
+King
+Queen
+Jack
+Ulti
+Sasaki
 ```
 
-Output :  
+Output :
 
 ```
-Yes
-Yes
-No 
-Yes
+Jack
+```
+
+Input :
+
+```
+20
+3
+King
+Queen
+Jack
+```
+
+Output :
+
+```
+Jack
 ```
