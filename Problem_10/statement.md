@@ -20,7 +20,7 @@ Help chopper figure out if he can save every injured person using the donors he 
 
 ## Input :
 
-The first line contains two space separated integers $n$ and $m$ $(1\leq n*m \leq 10^6)$ the number of injured people and the number of relations between the different blood types
+The first line contains two space separated integers $n$ $(1\leq n \leq 100)$ and $m$ $(0\leq m \leq 650)$ the number of injured people and the number of relations between the different blood types
 The second line of each testcase contains **n** space separated strings denoting the blood types of the injured people
 The third line of each testcase contains **n** space separated strings denoting the blood types of the donors
 The next **m** lines each contains two distinct, space separated uppercase english characters denoting the relations between the blood types.  
