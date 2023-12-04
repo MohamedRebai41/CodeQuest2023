@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luffy is a Foodie</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet" />
+    <link rel="stylesheet" href="./statmentStyle.css" />
+  </head>
+
+  <body
+    class="stackedit"
+    style="
+      background-image: url('../statmentBG.png');
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: center !important;
+    "
+  >
+    <div class="stackedit__html">
+      <h1 id="problem-name">Problem A : Luffy is a Foodie</h1>
+      <p class="const">
+        time limit per test: 1 second <br />
+        memory limit per test: 256 megabytes <br />
+        input: standard input <br />
+        output: standard output
+      </p>
+      <p>
+        Monkey D. Luffy, the main character of “One Piece,” is known for his
+        love of food, particularly meat.
+      </p>
+      <p>
+        You will be given a string consisting of the characters
+        ‘<strong>.</strong>’, ‘<strong>#</strong>’ and ‘<strong>|</strong>’:<br />
+        ‘<strong>.</strong>’ is an empty spot, ‘<strong>#</strong>’ is a piece
+        of meat and ‘<strong>|</strong>’ is a wall. This string represents a
+        <strong>1D</strong> grid.
+      </p>
+      <p>
+        Luffy needs to choose a starting point and a walking direction(left or
+        right) such that he maximizes the meat eaten.
+      </p>
+      <p>So he asked for your help.</p>
+      <p>
+        Your goal is to put Luffy in one of the empty spots in order to maximize
+        the meat eaten such that:
+      </p>
+      <ul>
+        <li>
+          <p>
+            Luffy can move in only 1 direction in the grid(left or right), in
+            other words he can’t change his direction after choosing it.
+          </p>
+        </li>
+        <li>
+          <p>Luffy will stop if he finds a wall or the edge of the grid.</p>
+        </li>
+      </ul>
+      <p>It is guaranteed that the grid contains at least one empty spot.</p>
+      <h2 id="input-">Input :</h2>
+      <p>
+        The first line of input contains a single integer
+        <strong>T</strong> (1≤T≤100) — the number of test cases. Then the test
+        cases follow. Each test case consists of two lines.
+      </p>
+      <p>
+        The first line of each test case contains an integer
+        <strong>n</strong> (1≤n≤10<sup>6</sup>) — the length of the string
+      </p>
+      <p>
+        The second line of each test case contains a string
+        <strong>s</strong> of length <strong>n</strong>, consisting of
+        characters ‘<strong>#</strong>’, ‘<strong>.</strong>’,
+        ‘<strong>|</strong>’.
+      </p>
+      <p>
+        It is guaranteed that the sum of <strong>n</strong> over all test cases
+        doesn’t exceed 10<sup>6</sup>.
+      </p>
+      <h2 id="output-">Output :</h2>
+      <p>
+        For each test case, output the maximum quantity of meat Luffy can get.
+      </p>
+      <h2 id="example">Example:</h2>
+      <p>Input :</p>
+      <pre><code>
+2
+
+8
+
+##.#|#.#
+
+12
+
+|.#|#.#.#..#
+
+</code></pre>
+      <p>Output :</p>
+      <pre><code>
+2
+
+3
+
+</code></pre>
+    </div>
+  </body>
+</html>
