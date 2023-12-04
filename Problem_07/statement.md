@@ -1,28 +1,25 @@
-# Welcome to StackEdit!
+# Problem:  The circle of death
 
-In the adventurous world of One Piece, our crew of intrepid pirates stumbled
 
-upon a curious challenge. Scattered across a mystical island were various points
+In the world of One Piece, there is a certain legend about a circle at sea where numerous ships vanished without a trace. This circle came to be known as the circle of death.
+The straw hat pirates found themselves obligated to pass through this circle to reach a certain island.
+Nami, their bright navigator, uncovered the secret behind this phenomenon.
+She found out three key observations about the circle:
+- The circle of death is formed by **n** specific points.
+- Within the circle of death, there are danger zones and safe zones.
+- The danger zones are the **right triangles** that can be formed using any 3 points from the **n** points forming the circle. 
 
-forming a circle. The task at hand: figure out how many different right triangles
-
-could be crafted from these points. The catch? The crew needed to count the number
-
-of unique trios of points, making sure each set was distinct. Can the crew navigate
-
-through this geometric puzzle and uncover the secrets hidden within the
-
-isle's mathematical shores?
+Help Nami find the number of danger zones so that the ship can avoid them to reach their destination safely.
 
 ## Input Format
 
+
 The first line contains an integer n(3 ≤ n ≤100000), the number of points.
 
-The second line contains n space-separated integers aᵢ(1≤aᵢ≤10^9) -- the **length of the arc** between point i and point i+1 (for 1≤i≤n−1), and aₙ is the distance between the point number n and the first point.
+The second line contains n space-separated integers **aᵢ**  $(1≤aᵢ≤10^9)$ -- the **length of the arc** between point i and point i+1 $(1≤i≤n−1)$, and aₙ is the distance between the point number n and the first point.
 
 ## Output Format
-
-for each test case print the number of unique right triangles that can be formed.
+Output the number of unique danger zones that appear in the circle.
 
 ## Example:
 
@@ -51,3 +48,7 @@ Output :
 ```
 1
 ```
+
+
+
+![Illustration](./illustration.jpg)

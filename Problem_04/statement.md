@@ -1,41 +1,50 @@
-# Problem A : Image classification
+# Problem A : Luffy is a Foodie
 
 ## Statement:
 
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-**This text is in bold**
 
-  - Lorem Ipsum dolor sit amet
+Monkey D. Luffy, the main character of "One Piece," is known for his love of food, particularly meat.
 
+You will be given a string consisting of the characters '**.**', '**#**' and '**|**':<br> '**.**' is an empty spot, '**#**' is a piece of meat and '**|**' is a wall. This string represents a **1D** grid.  
+
+Luffy needs to choose a starting point and a walking direction(left or right) such that he maximizes the meat eaten.
+So he asked for your help.
+
+Your goal is to put Luffy in one of the empty spots in order to maximize the meat eaten such that:
+
+- Luffy can move in only 1 direction in the grid(left or right), in other words he can't change his direction after choosing it.
+- Luffy will stop if he finds a wall or the edge of the grid.
+
+It is guaranteed that the grid contains at least one empty spot.
 
 ## Input :
-The first line contains a single integer **T** (1≤T≤100) — the number of test cases. Then the test cases follow. Each test case consists of one line.
+The first line of input contains a single integer **T** (1≤T≤100) — the number of test cases. Then the test cases follow. Each test case consists of two lines.
 
-The first line contains two integers **n**, **m** (1≤n, m≤100)
+The first line of each test case contains an integer **n** (1≤n≤10<sup>6</sup>) — the length of the string
 
-Each of the next n lines ...
+The second line of each test case contains a string **s** of length **n**, consisting of characters '**#**', '**.**', '**|**'.
 
+It is guaranteed that the sum of **n** over all test cases doesn't exceed 10<sup>6</sup>.
 ## Output :
-For each test case, output ....
+For each test case, output the maximum quantity of meat Luffy can get.
 
 ## Example:
 Input :  
 
 ```
-4
-4 5 6 7
-1 2 34 5
-49 45 12 10
-1 1 1 1
+2
+8
+##.#|#.#
+12
+|.#|#.#.#..#
 ```
 
 Output :  
 
 ```
-Yes
-Yes
-No 
-Yes
+2
+3
 ```
+
