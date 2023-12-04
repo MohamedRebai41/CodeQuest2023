@@ -29,6 +29,7 @@ Print a single line containing "**Luffy**" if Luffy wins or "**Zoro**" if Zoro w
 ## Example:
 input:
 ```
+3
 234
 155
 ```
@@ -38,6 +39,7 @@ Luffy
 ```
 input:
 ```
+4
 2394
 1595
 ```
