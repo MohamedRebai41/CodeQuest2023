@@ -16,7 +16,7 @@ isle's mathematical shores?
 
 ## Input Format
 
-The first line contains an integer n(1 ≤ n ≤100000), the number of points.
+The first line contains an integer n(3 ≤ n ≤100000), the number of points.
 
 The second line contains n space-separated integers aᵢ(1≤aᵢ≤10^9) -- the **length of the arc** between point i and point i+1 (for 1≤i≤n−1), and aₙ is the distance between the point number n and the first point.
 
