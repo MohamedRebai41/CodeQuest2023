@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Transfusion</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet" />
+    <link rel="stylesheet" href="./statmentStyle.css" />
+  </head>
+
+  <body
+    class="stackedit"
+    style="
+      background-image: url('../statmentBG.png');
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: center !important;
+    "
+  >
+    <div class="stackedit__html">
+      <h1 id="problem-name">Problem A: Blood Transfusion</h1>
+      <p class="const">
+        time limit per test: 1 second <br />
+        memory limit per test: 256 megabytes <br />
+        input: standard input <br />
+        output: standard output
+      </p>
+      <p>
+        <br />
+        Chopper is the doctor of the Straw Hat pirates. After the big war at the
+        country of wano, there are <strong>n</strong> injured people that need a
+        blood transfusion.
+        <br />
+        Chopper is determined to save everyone, so he rounds up
+        <strong>n</strong> donors.<br />
+        Each person has a specific blood type
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>A</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex">A</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.68333em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal">A</span></span
+              ></span
+            ></span
+          ></span
+        >,
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>B</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex">B</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.68333em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal" style="margin-right: 0.05017em"
+                  >B</span
+                ></span
+              ></span
+            ></span
+          ></span
+        >,
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>A</mi>
+                    <mi>B</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex">AB</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.68333em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal">A</span
+                ><span class="mord mathnormal" style="margin-right: 0.05017em"
+                  >B</span
+                ></span
+              ></span
+            ></span
+          ></span
+        >
+        or
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>O</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex">O</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.68333em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal" style="margin-right: 0.02778em"
+                  >O</span
+                ></span
+              ></span
+            ></span
+          ></span
+        >.
+        <br />
+        There are certain rules to the blood transfusion operations:
+      </p>
+      <ul>
+        <li>A donor can only donate to one injured person</li>
+        <li>
+          Blood type
+          <span class="katex--inline"
+            ><span class="katex"
+              ><span class="katex-mathml"
+                ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>A</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">A</annotation>
+                  </semantics>
+                </math></span
+              ><span class="katex-html" aria-hidden="true"
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 0.68333em; vertical-align: 0em"
+                  ></span
+                  ><span class="mord mathnormal">A</span></span
+                ></span
+              ></span
+            ></span
+          >
+          donors can only donate to recipients with blood types
+          <span class="katex--inline"
+            ><span class="katex"
+              ><span class="katex-mathml"
+                ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>A</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">A</annotation>
+                  </semantics>
+                </math></span
+              ><span class="katex-html" aria-hidden="true"
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 0.68333em; vertical-align: 0em"
+                  ></span
+                  ><span class="mord mathnormal">A</span></span
+                ></span
+              ></span
+            ></span
+          >
+          and
+          <span class="katex--inline"
+            ><span class="katex"
+              ><span class="katex-mathml"
+                ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>A</mi>
+                      <mi>B</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">AB</annotation>
+                  </semantics>
+                </math></span
+              ><span class="katex-html" aria-hidden="true"
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 0.68333em; vertical-align: 0em"
+                  ></span
+                  ><span class="mord mathnormal">A</span
+                  ><span class="mord mathnormal" style="margin-right: 0.05017em"
+                    >B</span
+                  ></span
+                ></span
+              ></span
+            ></span
+          >.
+        </li>
+        <li>
+          Blood type
+          <span class="katex--inline"
+            ><span class="katex"
+              ><span class="katex-mathml"
+                ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>B</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">B</annotation>
+                  </semantics>
+                </math></span
+              ><span class="katex-html" aria-hidden="true"
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 0.68333em; vertical-align: 0em"
+                  ></span
+                  ><span class="mord mathnormal" style="margin-right: 0.05017em"
+                    >B</span
+                  ></span
+                ></span
+              ></span
+            ></span
+          >
+          donors can only donate to recipients with blood types
+          <span class="katex--inline"
+            ><span class="katex"
+              ><span class="katex-mathml"
+                ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>B</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">B</annotation>
+                  </semantics>
+                </math></span
+              ><span class="katex-html" aria-hidden="true"
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 0.68333em; vertical-align: 0em"
+                  ></span
+                  ><span class="mord mathnormal" style="margin-right: 0.05017em"
+                    >B</span
+                  ></span
+                ></span
+              ></span
+            ></span
+          >
+          and
+          <span class="katex--inline"
+            ><span class="katex"
+              ><span class="katex-mathml"
+                ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>A</mi>
+                      <mi>B</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">AB</annotation>
+                  </semantics>
+                </math></span
+              ><span class="katex-html" aria-hidden="true"
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 0.68333em; vertical-align: 0em"
+                  ></span
+                  ><span class="mord mathnormal">A</span
+                  ><span class="mord mathnormal" style="margin-right: 0.05017em"
+                    >B</span
+                  ></span
+                ></span
+              ></span
+            ></span
+          >.
+        </li>
+        <li>
+          Blood type
+          <span class="katex--inline"
+            ><span class="katex"
+              ><span class="katex-mathml"
+                ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>A</mi>
+                      <mi>B</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">AB</annotation>
+                  </semantics>
+                </math></span
+              ><span class="katex-html" aria-hidden="true"
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 0.68333em; vertical-align: 0em"
+                  ></span
+                  ><span class="mord mathnormal">A</span
+                  ><span class="mord mathnormal" style="margin-right: 0.05017em"
+                    >B</span
+                  ></span
+                ></span
+              ></span
+            ></span
+          >
+          donors can only donate to recipients with blood type
+          <span class="katex--inline"
+            ><span class="katex"
+              ><span class="katex-mathml"
+                ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>A</mi>
+                      <mi>B</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">AB</annotation>
+                  </semantics>
+                </math></span
+              ><span class="katex-html" aria-hidden="true"
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 0.68333em; vertical-align: 0em"
+                  ></span
+                  ><span class="mord mathnormal">A</span
+                  ><span class="mord mathnormal" style="margin-right: 0.05017em"
+                    >B</span
+                  ></span
+                ></span
+              ></span
+            ></span
+          >
+          only.
+        </li>
+        <li>
+          Blood type
+          <span class="katex--inline"
+            ><span class="katex"
+              ><span class="katex-mathml"
+                ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>O</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">O</annotation>
+                  </semantics>
+                </math></span
+              ><span class="katex-html" aria-hidden="true"
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 0.68333em; vertical-align: 0em"
+                  ></span
+                  ><span class="mord mathnormal" style="margin-right: 0.02778em"
+                    >O</span
+                  ></span
+                ></span
+              ></span
+            ></span
+          >
+          donors can donate to recipients with blood types
+          <span class="katex--inline"
+            ><span class="katex"
+              ><span class="katex-mathml"
+                ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>A</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">A</annotation>
+                  </semantics>
+                </math></span
+              ><span class="katex-html" aria-hidden="true"
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 0.68333em; vertical-align: 0em"
+                  ></span
+                  ><span class="mord mathnormal">A</span></span
+                ></span
+              ></span
+            ></span
+          >,
+          <span class="katex--inline"
+            ><span class="katex"
+              ><span class="katex-mathml"
+                ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>B</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">B</annotation>
+                  </semantics>
+                </math></span
+              ><span class="katex-html" aria-hidden="true"
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 0.68333em; vertical-align: 0em"
+                  ></span
+                  ><span class="mord mathnormal" style="margin-right: 0.05017em"
+                    >B</span
+                  ></span
+                ></span
+              ></span
+            ></span
+          >,
+          <span class="katex--inline"
+            ><span class="katex"
+              ><span class="katex-mathml"
+                ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>A</mi>
+                      <mi>B</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">AB</annotation>
+                  </semantics>
+                </math></span
+              ><span class="katex-html" aria-hidden="true"
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 0.68333em; vertical-align: 0em"
+                  ></span
+                  ><span class="mord mathnormal">A</span
+                  ><span class="mord mathnormal" style="margin-right: 0.05017em"
+                    >B</span
+                  ></span
+                ></span
+              ></span
+            ></span
+          >
+          and
+          <span class="katex--inline"
+            ><span class="katex"
+              ><span class="katex-mathml"
+                ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>O</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">O</annotation>
+                  </semantics>
+                </math></span
+              ><span class="katex-html" aria-hidden="true"
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 0.68333em; vertical-align: 0em"
+                  ></span
+                  ><span class="mord mathnormal" style="margin-right: 0.02778em"
+                    >O</span
+                  ></span
+                ></span
+              ></span
+            ></span
+          >.
+        </li>
+      </ul>
+        Help chopper figure out if he can save every injured person using the
+        donors he picked.
+      </p>
+      <h2 id="input-">Input :</h2>
+      <p>
+        The first line contains T
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>1</mn>
+                    <mo>≤</mo>
+                    <mi>T</mi>
+                    <mo>≤</mo>
+                    <mn>100</mn>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >(1\leq T \leq 100)</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">1</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.8193em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord mathnormal" style="margin-right: 0.13889em"
+                  >T</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">100</span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >
+        , the number of testaces.
+      <br>
+        The first line of each testcase contains n
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>1</mn>
+                    <mo>≤</mo>
+                    <mi>n</mi>
+                    <mo>≤</mo>
+                    <mn>2</mn>
+                    <mo>∗</mo>
+                    <mn>1</mn>
+                    <msup>
+                      <mn>0</mn>
+                      <mn>6</mn>
+                    </msup>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >(1\leq n \leq 2*10^6)</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">1</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.77194em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord mathnormal">n</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.64444em; vertical-align: 0em"
+                ></span
+                ><span class="mord">2</span
+                ><span class="mspace" style="margin-right: 0.222222em"></span
+                ><span class="mbin">∗</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.222222em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1.06411em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">1</span
+                ><span class="mord"
+                  ><span class="mord">0</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.814108em"
+                          ><span
+                            class=""
+                            style="top: -3.063em; margin-right: 0.05em"
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight">6</span></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >
+        the number of injured people
+      <br>
+        The second line of each testcase containe <strong>n</strong> space
+        separated strings denoting the blood types of the injured people
+      <br>
+        The third line of each testcase contains <strong>n</strong> space
+        separated strings denoting the blood types of the donors
+      <br>
+        <strong
+          >It is guaranteed that the sum of n over all the testcases does not
+          exceed
+          <span class="katex--inline"
+            ><span class="katex"
+              ><span class="katex-mathml"
+                ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mn>2</mn>
+                      <mo>∗</mo>
+                      <mn>1</mn>
+                      <msup>
+                        <mn>0</mn>
+                        <mn>6</mn>
+                      </msup>
+                    </mrow>
+                    <annotation encoding="application/x-tex">2*10^6</annotation>
+                  </semantics>
+                </math></span
+              ><span class="katex-html" aria-hidden="true"
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 0.64444em; vertical-align: 0em"
+                  ></span
+                  ><span class="mord">2</span
+                  ><span class="mspace" style="margin-right: 0.222222em"></span
+                  ><span class="mbin">∗</span
+                  ><span
+                    class="mspace"
+                    style="margin-right: 0.222222em"
+                  ></span></span
+                ><span class="base"
+                  ><span
+                    class="strut"
+                    style="height: 0.814108em; vertical-align: 0em"
+                  ></span
+                  ><span class="mord">1</span
+                  ><span class="mord"
+                    ><span class="mord">0</span
+                    ><span class="msupsub"
+                      ><span class="vlist-t"
+                        ><span class="vlist-r"
+                          ><span class="vlist" style="height: 0.814108em"
+                            ><span
+                              class=""
+                              style="top: -3.063em; margin-right: 0.05em"
+                              ><span class="pstrut" style="height: 2.7em"></span
+                              ><span class="sizing reset-size6 size3 mtight"
+                                ><span class="mord mtight">6</span></span
+                              ></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ></span
+              ></span
+            ></span
+          ></strong
+        >
+      </p>
+      <h2 id="output-">Output :</h2>
+      <p>
+        For each query, output <strong>“YES”</strong>(without quotes) if the
+        injured people can be saved and <strong>“NO”</strong>(without quotes)
+        otherwise.
+      </p>
+      <h2 id="example">Example:</h2>
+      <p>Input :</p>
+      <pre><code>3
+2
+A A
+A B
+5
+A B AB O A
+O O O O O
+5
+A A A B AB
+O O B B B
+</code></pre>
+      <p>Output :</p>
+      <pre><code>NO
+YES
+NO
+</code></pre>
+      <h2 id="note">Note:</h2>
+      <p>
+        In the first test case, we can only save one person of blood type A.
+      <br>
+        In the second testcase, every person can receive a donation from an O
+        donor
+      <br>
+      In the third testcase, we can only save two people of blood type A.</p>
+    </div>
+  </body>
+</html>
