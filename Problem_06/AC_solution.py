@@ -1,7 +1,7 @@
 n, m, q = map(int, input().split())
 
-matrix = [[0] * 1002 for _ in range(1002)]
-prefixSum = [[0] * 1002 for _ in range(1002)]
+matrix = [[0] * 2002 for _ in range(2002)]
+prefixSum = [[0] * 2002 for _ in range(2002)]
 
 for i in range(1, n + 1):
     matrix[i][1:m+1] = map(int, input().split())

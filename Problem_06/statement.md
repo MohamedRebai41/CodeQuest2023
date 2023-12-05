@@ -54,7 +54,7 @@ Output **"YES"** if that position contains a treasure, and **"NO"** otherwise.
 
 
 ## Input :
-The first line contains 3 integers **n**, **m** (2≤n, m≤10<sup>3</sup>), number of rows and number of columns of our matrix respectively and **q** queries (1≤q≤10<sup>6</sup>).
+The first line contains 3 integers **n**, **m** (2≤n, m≤2×10<sup>3</sup>), number of rows and number of columns of our matrix respectively and **q** queries (1≤q≤10<sup>6</sup>).
 
 The next n lines each contain m integers seperated by spaces describing rows of the matrix. Each integer of the matrix **a<sub>i,j</sub>** &isin; [-10<sup>9</sup>, 10<sup>9</sup>].
 

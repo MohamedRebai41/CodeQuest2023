@@ -8,8 +8,8 @@ public class AC_solution {
         int m = scanner.nextInt();
         int q = scanner.nextInt();
 
-        int[][] matrix = new int[1002][1002];
-        int[][] prefixSum = new int[1002][1002];
+        int[][] matrix = new int[2002][2002];
+        int[][] prefixSum = new int[2002][2002];
 
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= m; j++) {

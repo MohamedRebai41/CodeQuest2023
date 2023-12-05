@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int matrix[1002][1002];
+int matrix[2002][2002];
 
 int main() {
     int n, m, q; cin >> n >> m >> q;
