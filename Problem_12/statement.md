@@ -54,8 +54,32 @@ Output :
 ## Explanation:
 First example:
 
-For initial bounty *B* = 300, the bounty will change as follows : 300 -> 300 -> 400 -> 400 -> 500 -> 500, thus the final bounty is less than L.
+For initial bounty *B* = 300, the bounty will change as follows : 
 
-If *B* = 301, we will have: 301 -> 401 -> 501 -> 601 -> 701 -> 801, and the final bounty is greater than L.
+i = 1: 300 <= 300, Trafalgar will run away.
+
+i = 2: 300 > 200, Trafalgar will win and bounty will become 400
+
+i = 3: 400 <= 500, Trafalgar will run away.
+
+i = 4: 400 > 100, Trafalgar will win and bounty will become 500
+
+i = 5: 500 <= 700, Trafalgar will run away.
+
+After all the fights, the final bounty is less than or equal to *L*
+
+If *B* = 301, we will have:
+
+i = 1: 301 > 300, Trafalgar will win and bounty will become 401.
+
+i = 2: 401 > 200, Trafalgar will win and bounty will become 501.
+
+i = 3: 501 > 500, Trafalgar will win and bounty will become 601.
+
+i = 4: 601 > 100, Trafalgar will win and bounty will become 701.
+
+i = 5: 701 > 700, Trafalgar will win and bounty will become 801.
+
+After all the fights, the final bounty will be greater than *L*.
 
 *B* = 300 is then the maximum initial bounty.
