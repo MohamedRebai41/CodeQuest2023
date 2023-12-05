@@ -3,9 +3,10 @@
 using namespace std;
 
 int main() {
+    int n;
     string a, b;
-    cin >> a >> b;
-    int n = a.size(), ai, bi;
+    cin >> n >> a >> b;
+    int ai, bi;
     bool turn = true;
     for (int i = 0; i < n; i++) {
         ai = a[i] - '0';
