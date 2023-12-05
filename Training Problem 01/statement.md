@@ -10,7 +10,9 @@ Help luffy out with this task.
 one line that contains the first number ***N***, the operation ***OP*** which is either ***'+'*** for addition or ***'*'*** for multiplication, and the second number ***M*** $1\le N,M \le 10^9$ <br>
 
 ## Output :
-Output The result of this operation. **(BE AWARE of Integer Overflow)**
+Output The result of this operation. 
+
+**Be aware of integer overflow. Use a 64-bit integer datatype if you're using Java or C or C++ (long for java,  long long for C and C++ and  %lld)**
 
 ## Example:
 Input :  
