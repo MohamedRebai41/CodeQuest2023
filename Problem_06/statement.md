@@ -121,3 +121,26 @@ In the **first** query the answer is YES because both sum are equal to 0 (there 
 <br>In the **second** query the answer is YES because: 9 + 5 **=** 14. (m[1][1] + m[2][2] = 14 and m[4][4] = 14)
 <br>In the **third** query the answer is NO because: m[2][1] = 6 $\neq$ m[4][3] = 8.
 <br>In the **fourth** query the answer is NO bcause: m[3][1] = 11 $\neq$ 0 (there are no elements in the lower part of the diagonal).
+
+
+Since the input/output for this problem can be very large, you need to use fast input/output, it is listed below how to do so for the available programmnig languages:
+
+**C++**: Add these lines to your code:
+<br>ios::sync_with_stdio(false);
+<br>cin.tie(NULL);
+<br>cout.tie(NULL);
+<br>Instead of using **endl** for a new line, use **"\n"**
+
+**Python**: Import sys library
+<br>Use this for input: sys.stdin.readline()
+<br>Use this for output: sys.stdout.write("YES\n") \ sys.stdout.write("NO\n")
+
+**Java**: Use buffered reader and buffered writer
+<br> -Import these java classes: java.io.BufferedReader; java.io.InputStreamReader; java.io.BufferedWriter; import java.io.OutputStreamWriter; java.util.StringTokenizer;
+<br> -Create a buffered reader and buffered writer:
+<br>BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+<br>BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
+<br> -For each line, create a string tokenizer:
+<br>StringTokenizer tokenizer = new StringTokenizer(reader.readLine());
+<br> -To get a value use: tokenizer.nextToken() (Example: int n = Integer.parseInt(tokenizer.nextToken());)
+
