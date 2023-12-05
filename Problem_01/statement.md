@@ -8,7 +8,7 @@ Usopp uses his binoculars to scout the enemy troupes and wants to know whether h
 Given the list of the genders of the enemies, tell Usopp if he needs to send Nami too or not.
 ## Input :
 The first line contains the number ***N*** the length of the following string. $1\le N \le 10^6$ <br>
-The first line contains a string **S** the list of the genders of the enemies: **'W'** for *woman*, **'M'** for *man*.
+The second line contains a string **S** the list of the genders of the enemies: **'W'** for *woman*, **'M'** for *man*.
 
 ## Output :
 Output "YES" without quotes if they should send Nami. Otherwise, output "NO"
