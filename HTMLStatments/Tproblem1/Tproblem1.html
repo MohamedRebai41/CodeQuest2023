@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sanji The Gentelman</title>
+    <title>Teach Kid Luffy</title>
     <link rel="stylesheet" href="https://stackedit.io/style.css" />
-    <link rel="stylesheet" href="./statmentStyle.css" />
     <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet" />
+    <link rel="stylesheet" href="./statmentStyle.css" />
   </head>
 
   <body
@@ -20,9 +20,9 @@
   >
     <div
       class="stackedit__html"
-      style="padding-left: 30px; padding-right: 30px"
+      style="padding-left: 40px; padding-right: 40px"
     >
-      <h1 id="problem-name">Problem A: Sanji The Gentleman</h1>
+      <h1 id="problem-name">Problem A: Teach Kid Luffy How To Count</h1>
       <p class="const">
         time limit per test: 1 second <br />
         memory limit per test: 256 megabytes <br />
@@ -30,25 +30,21 @@
         output: standard output
       </p>
       <p>
-        If you are a man, Sanji will give you hell. However, even if it means
-        killing him, Sanji would never lay a finger on a woman. A true, nice
-        Gentleman, right? Yeah, until the crew is attacked. Sanji is very strong
-        and would manage an army by himself unless there is a woman in the army
-        then he is screwed. The Strawhats crew are used to this fact, so, they
-        would send Nami with him if they were sure there is at least one woman
-        in the army so he doesn’t get beaten to death.
-        <br />
-        Usopp uses his binoculars to scout the enemy troupes and wants to know
-        whether he needs to send Nami with Sanji or if Sanji will manage by
-        himself.
-        <br />
-        Given the list of the genders of the enemies, tell Usopp if he needs to
-        send Nami too or not.
+        Monkey D. Garp, the Marines Hero, noticed that his grandkid Luffy can’t
+        count how much the groceries cost. Turns out little luffy doesn’t know
+        how too add nor multiply numbers.<br />
+        Garp is a busy old man so he couldn’t teach his grandkid so he wants you
+        to teach him how.<br />
+        Luffy would give you an operation that you need to evaluate for him.<br />
+        Help luffy out with this task.
       </p>
       <h2 id="input-">Input :</h2>
       <p>
-        The first line contains the number <em><strong>N</strong></em> the
-        length of the following string.
+        one line that contains the first number <em><strong>N</strong></em
+        >, the operation <em><strong>OP</strong></em> which is either
+        <em><strong>’+'</strong></em> for addition or
+        <strong><em>'</em>’</strong>* for multiplication, and the second number
+        <em><strong>M</strong></em>
         <span class="katex--inline"
           ><span class="katex"
             ><span class="katex-mathml"
@@ -58,15 +54,17 @@
                     <mn>1</mn>
                     <mo>≤</mo>
                     <mi>N</mi>
+                    <mo separator="true">,</mo>
+                    <mi>M</mi>
                     <mo>≤</mo>
                     <mn>1</mn>
                     <msup>
                       <mn>0</mn>
-                      <mn>6</mn>
+                      <mn>9</mn>
                     </msup>
                   </mrow>
                   <annotation encoding="application/x-tex"
-                    >1\le N \le 10^6</annotation
+                    >1\le N,M \le 10^9</annotation
                   >
                 </semantics>
               </math></span
@@ -86,10 +84,14 @@
               ><span class="base"
                 ><span
                   class="strut"
-                  style="height: 0.8193em; vertical-align: -0.13597em"
+                  style="height: 0.87777em; vertical-align: -0.19444em"
                 ></span
                 ><span class="mord mathnormal" style="margin-right: 0.10903em"
                   >N</span
+                ><span class="mpunct">,</span
+                ><span class="mspace" style="margin-right: 0.166667em"></span
+                ><span class="mord mathnormal" style="margin-right: 0.10903em"
+                  >M</span
                 ><span class="mspace" style="margin-right: 0.277778em"></span
                 ><span class="mrel">≤</span
                 ><span
@@ -113,7 +115,7 @@
                             style="top: -3.063em; margin-right: 0.05em"
                             ><span class="pstrut" style="height: 2.7em"></span
                             ><span class="sizing reset-size6 size3 mtight"
-                              ><span class="mord mtight">6</span></span
+                              ><span class="mord mtight">9</span></span
                             ></span
                           ></span
                         ></span
@@ -126,37 +128,29 @@
           ></span
         >
         <br />
-        The second line contains a string <strong>S</strong> the list of the
-        genders of the enemies: <strong>‘W’</strong> for <em>woman</em>,
-        <strong>‘M’</strong> for <em>man</em>.
       </p>
       <h2 id="output-">Output :</h2>
+      <p>Output The result of this operation.</p>
       <p>
-        Output “YES” without quotes if they should send Nami. Otherwise, output
-        “NO”
+        <strong
+          >Be aware of integer overflow. Use a 64-bit integer datatype if you’re
+          using Java or C or C++ (long for java, long long for C and C++ and
+          %lld). The int data type is a 32-bit integer with a maximum value of
+          2147483647</strong
+        >
       </p>
       <h2 id="example">Example:</h2>
       <p>Input :</p>
-      <pre><code>
-22
-MMMMMMMMMMMMMMMMMMMMMM
-
+      <pre><code>10 + 12
 </code></pre>
       <p>Output :</p>
-      <pre><code>
-NO
-
+      <pre><code>22
 </code></pre>
       <p>Input :</p>
-      <pre><code>
-24
-MWWWMMMMMMMMMMMMMMMMMMMW
-
+      <pre><code>100 * 200 
 </code></pre>
       <p>Output :</p>
-      <pre><code>
-YES
-
+      <pre><code>20000
 </code></pre>
     </div>
   </body>
