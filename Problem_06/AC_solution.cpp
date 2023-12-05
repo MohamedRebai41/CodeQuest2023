@@ -2,8 +2,8 @@
 using namespace std;
 
 // Arrays must be long long because integers between -10^9 and 10^9
-long long matrix[2002][2002];
-long long prefixSum[2002][2002];
+long long matrix[1002][1002];
+long long prefixSum[1002][1002];
 
 int main() {
     int n, m, q; cin >> n >> m >> q;
