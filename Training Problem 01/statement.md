@@ -12,7 +12,7 @@ one line that contains the first number ***N***, the operation ***OP*** which is
 ## Output :
 Output The result of this operation. 
 
-**Be aware of integer overflow. Use a 64-bit integer datatype if you're using Java or C or C++ (long for java,  long long for C and C++ and  %lld)**
+**Be aware of integer overflow. Use a 64-bit integer datatype if you're using Java or C or C++ (long for java,  long long for C and C++ and  %lld). The int data type is a 32-bit integer with a maximum value of 2147483647** 
 
 ## Example:
 Input :  
