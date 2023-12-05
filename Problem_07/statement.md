@@ -1,41 +1,54 @@
-# Problem A : Image classification
-
-## Statement:
+# Problem:  The circle of death
 
 
+In the world of One Piece, there is a certain legend about a circle at sea where numerous ships vanished without a trace. This circle came to be known as the circle of death.
+The straw hat pirates found themselves obligated to pass through this circle to reach a certain island.
+Nami, their bright navigator, uncovered the secret behind this phenomenon.
+She found out three key observations about the circle:
+- The circle of death is formed by **n** specific points.
+- Within the circle of death, there are danger zones and safe zones.
+- The danger zones are the **right triangles** that can be formed using any 3 points from the **n** points forming the circle. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-**This text is in bold**
+Help Nami find the number of danger zones so that the ship can avoid them to reach their destination safely.
 
-  - Lorem Ipsum dolor sit amet
+## Input Format
 
 
-## Input :
-The first line contains a single integer **T** (1≤T≤100) — the number of test cases. Then the test cases follow. Each test case consists of one line.
+The first line contains an integer n(3 ≤ n ≤100000), the number of points.
 
-The first line contains two integers **n**, **m** (1≤n, m≤100)
+The second line contains n space-separated integers **aᵢ**  $(1≤aᵢ≤10^9)$ -- the **length of the arc** between point i and point i+1 $(1≤i≤n−1)$, and aₙ is the distance between the point number n and the first point.
 
-Each of the next n lines ...
-
-## Output :
-For each test case, output ....
+## Output Format
+Output the number of unique danger zones that appear in the circle.
 
 ## Example:
-Input :  
+
+Input :
 
 ```
 4
-4 5 6 7
-1 2 34 5
-49 45 12 10
-1 1 1 1
+3 2 1 4
 ```
 
-Output :  
+Output :
 
 ```
-Yes
-Yes
-No 
-Yes
+2
 ```
+
+Input :
+
+```
+3
+1 2 3
+```
+
+Output :
+
+```
+1
+```
+
+
+
+![Illustration](./illustration.jpg)
