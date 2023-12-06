@@ -21,7 +21,7 @@
     <div class="stackedit__html">
       <h1 id="problem-name">Problem I : Hidden Treasures</h1>
       <p class="const">
-        time limit per test: 1 second <br />
+        time limit per test: 6 second <br />
         memory limit per test: 256 megabytes <br />
         input: standard input <br />
         output: standard output
@@ -29,83 +29,65 @@
       <p>
         Nami is the navigator of the Straw Hat Pirates in “One Piece”, and one
         of her primary skills is cartography.
-      </p>
-      <p>
+     <br>
         She has recently drawn a map for her team, this map is a matrix of
         dimensions <strong>n×m</strong>, where <strong>n</strong> and
         <strong>m</strong> denote the number of rows and columns respectively,
         composed of integers. This matrix serves as a guide to predict positions
         of hidden treasures.
-      </p>
-      <p>The diagonals of a matrix are defined as follows:</p>
+      <br>The diagonals of a matrix are defined as follows:
       <ul>
         <li>
-          <p>
-            <strong>Main diagonal</strong>: diagonal starting from element (1,
-            1) and passing through elements (d, d) for 1≤d≤min(n, m).
-          </p>
+          <strong>Main diagonal</strong>: diagonal starting from element (1, 1)
+          and passing through elements (d, d) for 1≤d≤min(n, m).
         </li>
         <li>
-          <p>
-            <strong>Upper diagonals</strong>: diagonals starting from elements
-            (1, 1+d) and passing through elements (k, k+d) for 1≤k≤n, 1≤d&lt;m,
-            k+d&lt;m.
-          </p>
+          <strong>Upper diagonals</strong>: diagonals starting from elements (1,
+          1+d) and passing through elements (k, k+d) for 1≤k≤n, 1≤d&lt;m,
+          k+d&lt;m.
         </li>
         <li>
-          <p>
-            <strong>Lower diagonals</strong> : diagonals starting from elements
-            (1+d, 1) and passing through elements (k+d, k) for 1≤k≤m, 1≤d&lt;n,
-            k+d≤n.
-          </p>
+          <strong>Lower diagonals</strong> : diagonals starting from elements
+          (1+d, 1) and passing through elements (k+d, k) for 1≤k≤m, 1≤d&lt;n,
+          k+d≤n.
         </li>
       </ul>
-      <p>Each element is then part of only one diagonal.</p>
-      <p>
+      Each element is then part of only one diagonal. <br>
         The diagram below illustrates the diagonals of a
         <strong>3×4</strong> matrix:
       </p>
-      <div
-        style="
-          font-weight: 700;
-          text-align: center;
-          width: 100%;
-          margin-top: 5px;
-          margin-bottom: 5px;
-        "
-      >
+      <div style="margin: auto">
         <table style="margin: auto">
-          <tr>
-            <td style="background-color: grey">1</td>
-            <td style="background-color: lightgrey">2</td>
-            <td style="background-color: grey">3</td>
-            <td style="background-color: lightgrey">4</td>
-          </tr>
-          <tr>
-            <td style="background-color: lightgrey">5</td>
-            <td style="background-color: grey">6</td>
-            <td style="background-color: lightgrey">7</td>
-            <td style="background-color: grey">8</td>
-          </tr>
-          <tr>
-            <td style="background-color: grey">9</td>
-            <td style="background-color: lightgrey">10</td>
-            <td style="background-color: grey">11</td>
-            <td style="background-color: lightgrey">12</td>
-          </tr>
+          <tbody>
+            <tr>
+              <td style="background-color: grey">1</td>
+              <td>2</td>
+              <td style="background-color: lightgrey">3</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td style="background-color: grey">6</td>
+              <td>7</td>
+              <td style="background-color: lightgrey">8</td>
+            </tr>
+            <tr>
+              <td style="background-color: lightgrey">9</td>
+              <td>10</td>
+              <td style="background-color: grey">11</td>
+              <td>12</td>
+            </tr>
+          </tbody>
         </table>
       </div>
       <p>
-        (Elements 1, 6 and 11 make a diagonal, Element 4 makes a diagonal by
-        itself too…)
-      </p>
-      <p>
-        A element of position <strong>(x, y)</strong> contains a treasure if and
-        only if it divides the diagonal into two parts with equal sum. In other
-        words, the sum the elements above our element in the diagonal is equal
-        to the sum of elements under our element in the diagonal.
-      </p>
-      <p>
+        Elements 1, 6 and 11 make a diagonal, Element 4 makes a diagonal by
+        itself too…
+      <br>
+        An element of position <strong>(x, y)</strong> contains a treasure if
+        and only if it divides the diagonal into two parts with equal sum. In
+        other words, the sum the elements above our element in the diagonal is
+        equal to the sum of elements under our element in the diagonal.
         <br />More formally
         <strong
           >Σ<sub>elements(i, j)∈diagonal containing(x, y) | i&lt;x, j&lt;y</sub>
@@ -114,28 +96,371 @@
           >
           M[i’][j’]</strong
         >.
-      </p>
-      <p>
+      <br>
         You will be given the matrix, and q queries, for each query you will be
-        given a position <strong>(x, y)</strong>
-      </p>
-      <p>
+        given a position <strong>(x, y)</strong><br />
         Output <strong>“YES”</strong> if that position contains a treasure, and
         <strong>“NO”</strong> otherwise.
       </p>
       <h2 id="input-">Input :</h2>
       <p>
         The first line contains 3 integers <strong>n</strong>,
-        <strong>m</strong> (2≤n, m≤2×10<sup>3</sup>), number of rows and number
-        of columns of our matrix respectively and <strong>q</strong> queries
-        (1≤q≤4×10<sup>6</sup>).
-      </p>
-      <p>
-        The next n lines each contain m integers seperated by spaces describing
-        rows of the matrix. Each integer of the matrix
-        <strong>a<sub>i,j</sub></strong> ∈ [-10<sup>9</sup>, 10<sup>9</sup>].
-      </p>
-      <p>
+        <strong>m</strong>
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>2</mn>
+                    <mo>≤</mo>
+                    <mi>n</mi>
+                    <mo separator="true">,</mo>
+                    <mi>m</mi>
+                    <mo>≤</mo>
+                    <mn>2.1</mn>
+                    <msup>
+                      <mn>0</mn>
+                      <mn>3</mn>
+                    </msup>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >(2≤n, m≤2.10^3)</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">2</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.83041em; vertical-align: -0.19444em"
+                ></span
+                ><span class="mord mathnormal">n</span
+                ><span class="mpunct">,</span
+                ><span class="mspace" style="margin-right: 0.166667em"></span
+                ><span class="mord mathnormal">m</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1.06411em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">2.1</span
+                ><span class="mord"
+                  ><span class="mord">0</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.814108em"
+                          ><span
+                            class=""
+                            style="top: -3.063em; margin-right: 0.05em"
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight">3</span></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >, number of rows and number of columns of our matrix respectively and
+        <strong>q</strong> queries
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>1</mn>
+                    <mo>≤</mo>
+                    <mi>q</mi>
+                    <mo>≤</mo>
+                    <mn>1</mn>
+                    <msup>
+                      <mn>0</mn>
+                      <mn>6</mn>
+                    </msup>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >(1≤q≤10^6)</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">1</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.83041em; vertical-align: -0.19444em"
+                ></span
+                ><span class="mord mathnormal" style="margin-right: 0.03588em"
+                  >q</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1.06411em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">1</span
+                ><span class="mord"
+                  ><span class="mord">0</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.814108em"
+                          ><span
+                            class=""
+                            style="top: -3.063em; margin-right: 0.05em"
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight">6</span></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >.
+      <br>
+        The next n lines each contain <strong>m</strong> space separated
+        integers describing rows of the matrix. Each integer of the matrix
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <msub>
+                      <mi>a</mi>
+                      <mrow>
+                        <mi>i</mi>
+                        <mi>j</mi>
+                      </mrow>
+                    </msub>
+                  </mrow>
+                  <annotation encoding="application/x-tex">a_{ij}</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.716668em; vertical-align: -0.286108em"
+                ></span
+                ><span class="mord"
+                  ><span class="mord mathnormal">a</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t vlist-t2"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.311664em"
+                          ><span
+                            class=""
+                            style="
+                              top: -2.55em;
+                              margin-left: 0em;
+                              margin-right: 0.05em;
+                            "
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight"
+                                ><span
+                                  class="mord mathnormal mtight"
+                                  style="margin-right: 0.05724em"
+                                  >ij</span
+                                ></span
+                              ></span
+                            ></span
+                          ></span
+                        ><span class="vlist-s">​</span></span
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.286108em"
+                          ><span
+                            class=""
+                          ></span></span></span></span></span></span></span></span></span
+        ></span>
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mo>−</mo>
+                    <mn>1</mn>
+                    <msup>
+                      <mn>0</mn>
+                      <mn>9</mn>
+                    </msup>
+                    <mo>≤</mo>
+                    <msub>
+                      <mi>a</mi>
+                      <mrow>
+                        <mi>i</mi>
+                        <mi>j</mi>
+                      </mrow>
+                    </msub>
+                    <mo>≤</mo>
+                    <mn>1</mn>
+                    <msup>
+                      <mn>0</mn>
+                      <mn>9</mn>
+                    </msup>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >(-10^9 \leq a_{ij} \leq 10^9)</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1.06411em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">−</span
+                ><span class="mord">1</span
+                ><span class="mord"
+                  ><span class="mord">0</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.814108em"
+                          ><span
+                            class=""
+                            style="top: -3.063em; margin-right: 0.05em"
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight">9</span></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.922078em; vertical-align: -0.286108em"
+                ></span
+                ><span class="mord"
+                  ><span class="mord mathnormal">a</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t vlist-t2"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.311664em"
+                          ><span
+                            class=""
+                            style="
+                              top: -2.55em;
+                              margin-left: 0em;
+                              margin-right: 0.05em;
+                            "
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight"
+                                ><span
+                                  class="mord mathnormal mtight"
+                                  style="margin-right: 0.05724em"
+                                  >ij</span
+                                ></span
+                              ></span
+                            ></span
+                          ></span
+                        ><span class="vlist-s">​</span></span
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.286108em"
+                          ><span
+                            class=""
+                          ></span></span></span></span></span></span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1.06411em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">1</span
+                ><span class="mord"
+                  ><span class="mord">0</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.814108em"
+                          ><span
+                            class=""
+                            style="top: -3.063em; margin-right: 0.05em"
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight">9</span></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >
+      <br>
         The next q lines each contain 2 integers <strong>x</strong> and
         <strong>y</strong> (1≤x≤n, 1≤y≤m), a specific row and column of our
         matrix respectively.
@@ -146,6 +471,18 @@
         position <strong>(x, y)</strong> can contain a treasure, and
         <strong>“NO”</strong>(without quotes) otherwise.
       </p>
-    </div>
+      <h2 id="example">Example:</h2>
+      <p>Input :</p>
+      <pre><code>4 4 4
+9 4 7 8
+6 5 0 3
+11 4 2 5
+10 3 8 14
+1 4
+3 3
+3 2
+4 2
+</code></pre>
+          </div>
   </body>
 </html>
