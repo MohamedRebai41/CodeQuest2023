@@ -29,7 +29,7 @@ The first line contains a single integer **n** $(1≤n≤2⋅10^5)$ — the leng
 The second line contains a string s describing the friends answers in the order they visited the room, where each character $s_i$ in the string is either 0 or 1 or ? indicating the answer of the i-th friend.
 **It is guaranteed that the input is logically correct**.
 
-It is guaranteed that the sum of string lengths over the entire input data set does not exceed $2⋅10^5$.
+It is guaranteed that the sum of **n** over all test cases does not exceed $2⋅10^5$.
 
 ## Output :
 
