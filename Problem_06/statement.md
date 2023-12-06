@@ -147,7 +147,7 @@ sys.stdout.write("YES\n")
 sys.stdout.write("NO\n")
 ```
 
-**Java**: Use the buffered reader and buffered writer classes
+* **Java**: Use the buffered reader and buffered writer classes
 Import these java classes: java.io.BufferedReader; java.io.InputStreamReader; java.io.BufferedWriter; import java.io.OutputStreamWriter; java.util.StringTokenizer;
 ```
 BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
