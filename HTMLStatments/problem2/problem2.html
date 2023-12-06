@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Turn Game</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet" />
+    <link rel="stylesheet" href="./statmentStyle.css" />
+  </head>
+
+  <body
+    class="stackedit"
+    style="
+      background-image: url('../statmentBG.png');
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: center !important;
+    "
+  >
+    <div class="stackedit__html">
+      <h1 id="problem-name">Problem J : The Turn Game</h1>
+      <p class="const">
+        time limit per test: 1 second <br />
+        memory limit per test: 256 megabytes <br />
+        input: standard input <br />
+        output: standard output
+      </p>
+      <p>
+        Monkey D. Luffy and Roronoa Zoro are engaged in a strategic number
+        swapping game. The game involves two numbers,
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>A</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex">A</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.68333em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal">A</span></span
+              ></span
+            ></span
+          ></span
+        >
+        and
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>B</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex">B</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.68333em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal" style="margin-right: 0.05017em"
+                  >B</span
+                ></span
+              ></span
+            ></span
+          ></span
+        >, each of length
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>n</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex">n</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.43056em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal">n</span></span
+              ></span
+            ></span
+          ></span
+        >. In each turn, the players will perform actions based on the values of
+        digits of the numbers denoted by
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <msub>
+                      <mi>a</mi>
+                      <mi>i</mi>
+                    </msub>
+                  </mrow>
+                  <annotation encoding="application/x-tex">a_i</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.58056em; vertical-align: -0.15em"
+                ></span
+                ><span class="mord"
+                  ><span class="mord mathnormal">a</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t vlist-t2"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.311664em"
+                          ><span
+                            class=""
+                            style="
+                              top: -2.55em;
+                              margin-left: 0em;
+                              margin-right: 0.05em;
+                            "
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mathnormal mtight"
+                                >i</span
+                              ></span
+                            ></span
+                          ></span
+                        ><span class="vlist-s">​</span></span
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.15em"
+                          ><span
+                            class=""
+                          ></span></span></span></span></span></span></span></span></span
+        ></span>
+        and
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <msub>
+                      <mi>b</mi>
+                      <mi>i</mi>
+                    </msub>
+                  </mrow>
+                  <annotation encoding="application/x-tex">b_i</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.84444em; vertical-align: -0.15em"
+                ></span
+                ><span class="mord"
+                  ><span class="mord mathnormal">b</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t vlist-t2"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.311664em"
+                          ><span
+                            class=""
+                            style="
+                              top: -2.55em;
+                              margin-left: 0em;
+                              margin-right: 0.05em;
+                            "
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mathnormal mtight"
+                                >i</span
+                              ></span
+                            ></span
+                          ></span
+                        ><span class="vlist-s">​</span></span
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.15em"
+                          ><span
+                            class=""
+                          ></span></span></span></span></span></span></span></span></span
+        ></span>
+        (<span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mn>1</mn>
+                    <mo>≤</mo>
+                    <mi>i</mi>
+                    <mo>≤</mo>
+                    <mi>n</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >1 \leq i \leq n</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.78041em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord">1</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.79549em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord mathnormal">i</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.43056em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal">n</span></span
+              ></span
+            ></span
+          ></span
+        >).<br />
+        The rules of the game are:
+      </p>
+      <ul>
+        <li>
+          <p>
+            Game starts at turn 1 from the left digits of
+            <span class="katex--inline"
+              ><span class="katex"
+                ><span class="katex-mathml"
+                  ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>A</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">A</annotation>
+                    </semantics>
+                  </math></span
+                ><span class="katex-html" aria-hidden="true"
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.68333em; vertical-align: 0em"
+                    ></span
+                    ><span class="mord mathnormal">A</span></span
+                  ></span
+                ></span
+              ></span
+            >
+            and
+            <span class="katex--inline"
+              ><span class="katex"
+                ><span class="katex-mathml"
+                  ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>B</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">B</annotation>
+                    </semantics>
+                  </math></span
+                ><span class="katex-html" aria-hidden="true"
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.68333em; vertical-align: 0em"
+                    ></span
+                    ><span
+                      class="mord mathnormal"
+                      style="margin-right: 0.05017em"
+                      >B</span
+                    ></span
+                  ></span
+                ></span
+              ></span
+            >.
+          </p>
+        </li>
+        <li>
+          <p>
+            in the
+            <span class="katex--inline"
+              ><span class="katex"
+                ><span class="katex-mathml"
+                  ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>i</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">i</annotation>
+                    </semantics>
+                  </math></span
+                ><span class="katex-html" aria-hidden="true"
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.65952em; vertical-align: 0em"
+                    ></span
+                    ><span class="mord mathnormal">i</span></span
+                  ></span
+                ></span
+              ></span
+            >-th turn, if
+            <span class="katex--inline"
+              ><span class="katex"
+                ><span class="katex-mathml"
+                  ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>a</mi>
+                          <mi>i</mi>
+                        </msub>
+                        <mo>&gt;</mo>
+                        <msub>
+                          <mi>b</mi>
+                          <mi>i</mi>
+                        </msub>
+                      </mrow>
+                      <annotation encoding="application/x-tex"
+                        >a_i &gt; b_i</annotation
+                      >
+                    </semantics>
+                  </math></span
+                ><span class="katex-html" aria-hidden="true"
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.6891em; vertical-align: -0.15em"
+                    ></span
+                    ><span class="mord"
+                      ><span class="mord mathnormal">a</span
+                      ><span class="msupsub"
+                        ><span class="vlist-t vlist-t2"
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 0.311664em"
+                              ><span
+                                class=""
+                                style="
+                                  top: -2.55em;
+                                  margin-left: 0em;
+                                  margin-right: 0.05em;
+                                "
+                                ><span
+                                  class="pstrut"
+                                  style="height: 2.7em"
+                                ></span
+                                ><span class="sizing reset-size6 size3 mtight"
+                                  ><span class="mord mathnormal mtight"
+                                    >i</span
+                                  ></span
+                                ></span
+                              ></span
+                            ><span class="vlist-s">​</span></span
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 0.15em"
+                              ><span
+                                class=""
+                              ></span></span></span></span></span></span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.277778em"
+                    ></span
+                    ><span class="mrel">&gt;</span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.277778em"
+                    ></span></span
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.84444em; vertical-align: -0.15em"
+                    ></span
+                    ><span class="mord"
+                      ><span class="mord mathnormal">b</span
+                      ><span class="msupsub"
+                        ><span class="vlist-t vlist-t2"
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 0.311664em"
+                              ><span
+                                class=""
+                                style="
+                                  top: -2.55em;
+                                  margin-left: 0em;
+                                  margin-right: 0.05em;
+                                "
+                                ><span
+                                  class="pstrut"
+                                  style="height: 2.7em"
+                                ></span
+                                ><span class="sizing reset-size6 size3 mtight"
+                                  ><span class="mord mathnormal mtight"
+                                    >i</span
+                                  ></span
+                                ></span
+                              ></span
+                            ><span class="vlist-s">​</span></span
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 0.15em"
+                              ><span
+                                class=""
+                              ></span></span></span></span></span></span></span></span></span></span
+            >, the current player keeps playing the next turn.
+          </p>
+        </li>
+        <li>
+          <p>
+            in the
+            <span class="katex--inline"
+              ><span class="katex"
+                ><span class="katex-mathml"
+                  ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>i</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">i</annotation>
+                    </semantics>
+                  </math></span
+                ><span class="katex-html" aria-hidden="true"
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.65952em; vertical-align: 0em"
+                    ></span
+                    ><span class="mord mathnormal">i</span></span
+                  ></span
+                ></span
+              ></span
+            >-th turn, if
+            <span class="katex--inline"
+              ><span class="katex"
+                ><span class="katex-mathml"
+                  ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>a</mi>
+                          <mi>i</mi>
+                        </msub>
+                        <mo>&lt;</mo>
+                        <msub>
+                          <mi>b</mi>
+                          <mi>i</mi>
+                        </msub>
+                      </mrow>
+                      <annotation encoding="application/x-tex"
+                        >a_i &lt; b_i</annotation
+                      >
+                    </semantics>
+                  </math></span
+                ><span class="katex-html" aria-hidden="true"
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.6891em; vertical-align: -0.15em"
+                    ></span
+                    ><span class="mord"
+                      ><span class="mord mathnormal">a</span
+                      ><span class="msupsub"
+                        ><span class="vlist-t vlist-t2"
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 0.311664em"
+                              ><span
+                                class=""
+                                style="
+                                  top: -2.55em;
+                                  margin-left: 0em;
+                                  margin-right: 0.05em;
+                                "
+                                ><span
+                                  class="pstrut"
+                                  style="height: 2.7em"
+                                ></span
+                                ><span class="sizing reset-size6 size3 mtight"
+                                  ><span class="mord mathnormal mtight"
+                                    >i</span
+                                  ></span
+                                ></span
+                              ></span
+                            ><span class="vlist-s">​</span></span
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 0.15em"
+                              ><span
+                                class=""
+                              ></span></span></span></span></span></span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.277778em"
+                    ></span
+                    ><span class="mrel">&lt;</span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.277778em"
+                    ></span></span
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.84444em; vertical-align: -0.15em"
+                    ></span
+                    ><span class="mord"
+                      ><span class="mord mathnormal">b</span
+                      ><span class="msupsub"
+                        ><span class="vlist-t vlist-t2"
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 0.311664em"
+                              ><span
+                                class=""
+                                style="
+                                  top: -2.55em;
+                                  margin-left: 0em;
+                                  margin-right: 0.05em;
+                                "
+                                ><span
+                                  class="pstrut"
+                                  style="height: 2.7em"
+                                ></span
+                                ><span class="sizing reset-size6 size3 mtight"
+                                  ><span class="mord mathnormal mtight"
+                                    >i</span
+                                  ></span
+                                ></span
+                              ></span
+                            ><span class="vlist-s">​</span></span
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 0.15em"
+                              ><span
+                                class=""
+                              ></span></span></span></span></span></span></span></span></span></span
+            >, the current player loses his turn and the other player plays the
+            next turn.
+          </p>
+        </li>
+        <li>
+          <p>
+            in the
+            <span class="katex--inline"
+              ><span class="katex"
+                ><span class="katex-mathml"
+                  ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>i</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">i</annotation>
+                    </semantics>
+                  </math></span
+                ><span class="katex-html" aria-hidden="true"
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.65952em; vertical-align: 0em"
+                    ></span
+                    ><span class="mord mathnormal">i</span></span
+                  ></span
+                ></span
+              ></span
+            >-th turn, if
+            <span class="katex--inline"
+              ><span class="katex"
+                ><span class="katex-mathml"
+                  ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>a</mi>
+                          <mi>i</mi>
+                        </msub>
+                        <mo>=</mo>
+                        <msub>
+                          <mi>b</mi>
+                          <mi>i</mi>
+                        </msub>
+                      </mrow>
+                      <annotation encoding="application/x-tex"
+                        >a_i = b_i</annotation
+                      >
+                    </semantics>
+                  </math></span
+                ><span class="katex-html" aria-hidden="true"
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.58056em; vertical-align: -0.15em"
+                    ></span
+                    ><span class="mord"
+                      ><span class="mord mathnormal">a</span
+                      ><span class="msupsub"
+                        ><span class="vlist-t vlist-t2"
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 0.311664em"
+                              ><span
+                                class=""
+                                style="
+                                  top: -2.55em;
+                                  margin-left: 0em;
+                                  margin-right: 0.05em;
+                                "
+                                ><span
+                                  class="pstrut"
+                                  style="height: 2.7em"
+                                ></span
+                                ><span class="sizing reset-size6 size3 mtight"
+                                  ><span class="mord mathnormal mtight"
+                                    >i</span
+                                  ></span
+                                ></span
+                              ></span
+                            ><span class="vlist-s">​</span></span
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 0.15em"
+                              ><span
+                                class=""
+                              ></span></span></span></span></span></span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.277778em"
+                    ></span
+                    ><span class="mrel">=</span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.277778em"
+                    ></span></span
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.84444em; vertical-align: -0.15em"
+                    ></span
+                    ><span class="mord"
+                      ><span class="mord mathnormal">b</span
+                      ><span class="msupsub"
+                        ><span class="vlist-t vlist-t2"
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 0.311664em"
+                              ><span
+                                class=""
+                                style="
+                                  top: -2.55em;
+                                  margin-left: 0em;
+                                  margin-right: 0.05em;
+                                "
+                                ><span
+                                  class="pstrut"
+                                  style="height: 2.7em"
+                                ></span
+                                ><span class="sizing reset-size6 size3 mtight"
+                                  ><span class="mord mathnormal mtight"
+                                    >i</span
+                                  ></span
+                                ></span
+                              ></span
+                            ><span class="vlist-s">​</span></span
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 0.15em"
+                              ><span
+                                class=""
+                              ></span></span></span></span></span></span></span></span></span></span
+            >, the current player has two choices. Either he keeps playing the
+            next turn or lets the other player play the next turn.
+          </p>
+        </li>
+        <li>
+          <p>
+            The game ends in the
+            <span class="katex--inline"
+              ><span class="katex"
+                ><span class="katex-mathml"
+                  ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo>+</mo>
+                        <mn>1</mn>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex"
+                        >{(n+1)}</annotation
+                      >
+                    </semantics>
+                  </math></span
+                ><span class="katex-html" aria-hidden="true"
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 1em; vertical-align: -0.25em"
+                    ></span
+                    ><span class="mord"
+                      ><span class="mopen">(</span
+                      ><span class="mord mathnormal">n</span
+                      ><span
+                        class="mspace"
+                        style="margin-right: 0.222222em"
+                      ></span
+                      ><span class="mbin">+</span
+                      ><span
+                        class="mspace"
+                        style="margin-right: 0.222222em"
+                      ></span
+                      ><span class="mord">1</span
+                      ><span class="mclose">)</span></span
+                    ></span
+                  ></span
+                ></span
+              ></span
+            >-th turn. The winner is the player who has the turn in the
+            <span class="katex--inline"
+              ><span class="katex"
+                ><span class="katex-mathml"
+                  ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo>+</mo>
+                        <mn>1</mn>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex"
+                        >{(n+1)}</annotation
+                      >
+                    </semantics>
+                  </math></span
+                ><span class="katex-html" aria-hidden="true"
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 1em; vertical-align: -0.25em"
+                    ></span
+                    ><span class="mord"
+                      ><span class="mopen">(</span
+                      ><span class="mord mathnormal">n</span
+                      ><span
+                        class="mspace"
+                        style="margin-right: 0.222222em"
+                      ></span
+                      ><span class="mbin">+</span
+                      ><span
+                        class="mspace"
+                        style="margin-right: 0.222222em"
+                      ></span
+                      ><span class="mord">1</span
+                      ><span class="mclose">)</span></span
+                    ></span
+                  ></span
+                ></span
+              ></span
+            >-th turn.
+          </p>
+        </li>
+      </ul>
+      <p>
+        Given
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>A</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex">A</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.68333em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal">A</span></span
+              ></span
+            ></span
+          ></span
+        >
+        and
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>B</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex">B</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.68333em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal" style="margin-right: 0.05017em"
+                  >B</span
+                ></span
+              ></span
+            ></span
+          ></span
+        >, your task is determine the winner of the game if Luffy begins playing
+        in the first turn and both players play optimally.
+      </p>
+      <h2 id="input">Input:</h2>
+      <p>
+        The first line of input contains a single integer
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>n</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex">n</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.43056em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal">n</span></span
+              ></span
+            ></span
+          ></span
+        >
+        (<span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mn>1</mn>
+                    <mo>≤</mo>
+                    <mi>n</mi>
+                    <mo>≤</mo>
+                    <mn>4</mn>
+                    <mo>×</mo>
+                    <mn>1</mn>
+                    <msup>
+                      <mn>0</mn>
+                      <mn>6</mn>
+                    </msup>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >1 \leq n \leq 4 \times 10^6</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.78041em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord">1</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.77194em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord mathnormal">n</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.72777em; vertical-align: -0.08333em"
+                ></span
+                ><span class="mord">4</span
+                ><span class="mspace" style="margin-right: 0.222222em"></span
+                ><span class="mbin">×</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.222222em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.814108em; vertical-align: 0em"
+                ></span
+                ><span class="mord">1</span
+                ><span class="mord"
+                  ><span class="mord">0</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.814108em"
+                          ><span
+                            class=""
+                            style="top: -3.063em; margin-right: 0.05em"
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight">6</span></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ></span
+              ></span
+            ></span
+          ></span
+        >), the number of digits of
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>A</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex">A</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.68333em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal">A</span></span
+              ></span
+            ></span
+          ></span
+        >
+        and
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>B</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex">B</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.68333em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal" style="margin-right: 0.05017em"
+                  >B</span
+                ></span
+              ></span
+            ></span
+          ></span
+        >.
+      </p>
+      <p>
+        The second line of input contains a single integer
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>A</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex">A</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.68333em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal">A</span></span
+              ></span
+            ></span
+          ></span
+        >.
+      </p>
+      <p>
+        The second line of input contains a single integer
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>B</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex">B</annotation>
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.68333em; vertical-align: 0em"
+                ></span
+                ><span class="mord mathnormal" style="margin-right: 0.05017em"
+                  >B</span
+                ></span
+              ></span
+            ></span
+          ></span
+        >.
+      </p>
+      <h2 id="output">Output:</h2>
+      <p>
+        Print a single line containing “<strong>Luffy</strong>” if Luffy wins or
+        “<strong>Zoro</strong>” if Zoro wins.
+      </p>
+      <h2 id="example">Note:</h2>
+      <p>input:</p>
+      <pre><code>3
+234
+155
+</code></pre>
+      <p>output:</p>
+      <pre><code>Luffy
+</code></pre>
+      <p>input:</p>
+      <pre><code>4
+2394
+1595
+</code></pre>
+      <p>output:</p>
+      <pre><code>Zoro
+</code></pre>
+      <h2 id="explanation">Explanation:</h2>
+      <p>
+        First example:<br />
+        In the first turn, 2 &gt; 1 so Luffy keeps playing. In the second turn,
+        3 &lt; 5 so Luffy loses his turn. In the third turn, 4 &lt; 5 so Zoro
+        also loses his turn. In the fourth turn, the game ends with Luffy having
+        this turn, so Luffy wins.
+      </p>
+      <p>
+        Second example:<br />
+        In the first turn, 2 &gt; 1 so Luffy keeps playing. In the second turn,
+        3 &lt; 5 so Luffy loses his turn. In the third turn, Zoro choses to let
+        Luffy play the next turn. In the fourth turn, 4 &lt; 5 so Luffy loses
+        his turn. In the fifth turn, the game ends with Zoro having this turn,
+        so Zoro wins.
+      </p>
+    </div>
+  </body>
+</html>
