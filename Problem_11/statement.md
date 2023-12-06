@@ -1,4 +1,4 @@
-# Problem K : Clone Fruit
+# Problem H : Clone Fruit
 
 ## Statement:
 
@@ -7,11 +7,11 @@ Kaido, one of the four emperors of the sea, would like to build a huge army in o
 He first acquired a huge number of Clone Fruits: These fruits, like the name indicates, have the unique ability to clone a person
 
 Then, he chose **m** of his best crewmates and started cloning them as follows:
+
 - At first the crewmates stand in a queue
 - Each time a crewmate is cloned, the two resulting persons rejoin the end of the queue
 
 Kaido would like to keep track of the person that ate the **n-th** fruit. Help him figure this out.
-
 
 ## Input :
 
@@ -21,7 +21,7 @@ The second line contains a single integer **m** $(1≤m≤1000)$ indicating the 
 
 The next **m** lines contains the names of the m individuals with the i-th line representing the name of the i-th person
 
-**It is guaranteed that the length of the names does not exceed 10** 
+**It is guaranteed that the length of the names does not exceed 10**
 
 ## Output :
 
@@ -50,7 +50,7 @@ Jack
 Input :
 
 ```
-20
+6
 3
 King
 Queen

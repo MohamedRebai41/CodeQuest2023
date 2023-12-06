@@ -1,4 +1,4 @@
-# Problem C : Stolen necklace
+# Problem A : Stolen necklace
 
 ## Statement:
 

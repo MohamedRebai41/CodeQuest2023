@@ -1,16 +1,13 @@
-
-# Problem A : Hidden Treasures
+# Problem I : Hidden Treasures
 
 ## Statement:
-
-
 
 Nami is the navigator of the Straw Hat Pirates in "One Piece", and one of her primary skills is cartography.
 
 She has recently drawn a map for her team, this map is a matrix of dimensions **n×m**, where **n** and **m** denote the number of rows and columns respectively, composed of integers. This matrix serves as a guide to predict positions of hidden treasures.
 
-
 The diagonals of a matrix are defined as follows:
+
 - **Main diagonal**: diagonal starting from element (1, 1) and passing through elements (d, d) for 1≤d≤min(n, m).
 - **Upper diagonals**: diagonals starting from elements (1, 1+d) and passing through elements (k, k+d) for 1≤k≤n, 1≤d<m, k+d<m.
 - **Lower diagonals** : diagonals starting from elements (1+d, 1) and passing through elements (k+d, k) for 1≤k≤m, 1≤d<n, k+d≤n.
@@ -18,6 +15,7 @@ The diagonals of a matrix are defined as follows:
 Each element is then part of only one diagonal.
 
 The diagram below illustrates the diagonals of a **3×4** matrix:
+
 <div style="font-weight: 700; text-align: center">
         <table>
           <tr>
@@ -47,24 +45,23 @@ An element of position **(x, y)** contains a treasure if and only if it divides 
 
 <br>More formally **&Sigma;<sub>elements(i, j)∈diagonal containing(x, y) | i<x, j<y</sub> M[i][j] = &Sigma;<sub>elements(i', j')∈diagonal containing(x, y) | x<i', y<j'</sub> M[i'][j']**.
 
-
-
 You will be given the matrix, and q queries, for each query you will be given a position **(x, y)**
 Output **"YES"** if that position contains a treasure, and **"NO"** otherwise.
 
-
 ## Input :
+
 The first line contains 3 integers **n**, **m** (2≤n, m≤10<sup>3</sup>), number of rows and number of columns of our matrix respectively and **q** queries (1≤q≤10<sup>6</sup>).
 
 The next n lines each contain m integers seperated by spaces describing rows of the matrix. Each integer of the matrix **a<sub>i,j</sub>** &isin; [-10<sup>9</sup>, 10<sup>9</sup>].
 
 The next q lines each contain 2 integers **x** and **y** (1≤x≤n, 1≤y≤m), a specific row and column of our matrix respectively.
 
-
 ## Output :
+
 For each query, output **"YES"**(without quotes) if the position **(x, y)** can contain a treasure, and **"NO"**(without quotes) otherwise.
 
 ## Example:
+
 Input :
 
 ```
@@ -87,7 +84,9 @@ YES
 NO
 NO
 ```
+
 ## Note:
+
 <div style="font-weight: 700; text-align: center">
         <table>
           <tr>
