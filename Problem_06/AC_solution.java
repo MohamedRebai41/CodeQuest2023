@@ -1,19 +1,27 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
 
 public class AC_solution {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int n = scanner.nextInt();
-        int m = scanner.nextInt();
-        int q = scanner.nextInt();
+        StringTokenizer tokenizer = new StringTokenizer(reader.readLine());
+        int n = Integer.parseInt(tokenizer.nextToken());
+        int m = Integer.parseInt(tokenizer.nextToken());
+        int q = Integer.parseInt(tokenizer.nextToken());
 
         int[][] matrix = new int[2002][2002];
         int[][] prefixSum = new int[2002][2002];
 
         for (int i = 1; i <= n; i++) {
+            tokenizer = new StringTokenizer(reader.readLine());
             for (int j = 1; j <= m; j++) {
-                matrix[i][j] = scanner.nextInt();
+                matrix[i][j] = Integer.parseInt(tokenizer.nextToken());
             }
         }
 
@@ -24,16 +32,19 @@ public class AC_solution {
         }
 
         for (int k = 0; k < q; k++) {
-            int x = scanner.nextInt();
-            int y = scanner.nextInt();
+            tokenizer = new StringTokenizer(reader.readLine());
+            int x = Integer.parseInt(tokenizer.nextToken());
+            int y = Integer.parseInt(tokenizer.nextToken());
 
             if (prefixSum[x - 1][y - 1] == prefixSum[Math.min(n - x, m - y) + x][Math.min(n - x, m - y) + y] - prefixSum[x][y]) {
-                System.out.println("YES");
+                writer.write("YES\n");
             } else {
-                System.out.println("NO");
+                writer.write("NO\n");
             }
         }
 
-        scanner.close();
+        writer.flush();
+        reader.close();
+        writer.close();
     }
 }

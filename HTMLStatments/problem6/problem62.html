@@ -18,73 +18,52 @@
       background-position: center !important;
     "
   >
-    <div class="stackedit__html" style="margin-left: 15px; margin-right: 15px">
-      <h2 id="example">Example:</h2>
-      <p>Input :</p>
-      <pre><code>
-4 4 4
-9 4 7 8
-6 5 0 3
-11 4 2 5
-10 3 8 14
-1 4
-3 3 
-3 2
-4 2
-
-</code></pre>
+    <div class="stackedit__html" style="padding-left: 65px; padding-right: 65px">
       <p>Output :</p>
-      <pre><code>
-YES
+      <pre><code>YES
 YES
 NO
 NO
-
 </code></pre>
       <h2 id="note">Note:</h2>
-      <div
-        style="
-          font-weight: 700;
-          text-align: center;
-          width: 100%;
-          margin-top: 5px;
-          margin-bottom: 5px;
-        "
-      >
+      <div>
         <table style="margin: auto">
-          <tr>
-            <td>9</td>
-            <td>4</td>
-            <td>7</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>5</td>
-            <td>0</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td>4</td>
-            <td>2</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>3</td>
-            <td>8</td>
-            <td>14</td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>9</td>
+              <td>4</td>
+              <td>7</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>5</td>
+              <td>0</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>4</td>
+              <td>2</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>3</td>
+              <td>8</td>
+              <td>14</td>
+            </tr>
+          </tbody>
         </table>
       </div>
       <p>
         In the <strong>first</strong> query the answer is YES because both sum
         are equal to 0 (there are no elements in the upper or lower part of the
-        diagonal). <br />In the <strong>second</strong> query the answer is YES
-        because: 9 + 5 <strong>=</strong> 14. (m[1][1] + m[2][2] = 14 and
-        m[4][4] = 14) <br />In the <strong>third</strong> query the answer is NO
-        because: m[2][1] = 6
+        diagonal).
+        <br />In the <strong>second</strong> query the answer is YES because: 9
+        + 5 <strong>=</strong> 14. (m[1][1] + m[2][2] = 14 and m[4][4] = 14)
+        <br />In the <strong>third</strong> query the answer is NO because:
+        m[2][1] = 6
         <span class="katex--inline"
           ><span class="katex"
             ><span class="katex-mathml"
@@ -169,6 +148,50 @@ NO
           ></span
         >
         0 (there are no elements in the lower part of the diagonal).
+      </p>
+      <h2 id="important">Important</h2>
+      <p>
+        Since the input/output for this problem can be very large, you need to
+        use <strong>fast input/output</strong> to optimize performance, it is
+        listed below how to do so for the available programming languages:
+      <ul>
+        <li><strong>C++</strong>:</li>
+      </ul>
+      Add these lines to your code:
+      <pre><code>ios::sync_with_stdio(false);
+cin.tie(NULL);
+cout.tie(NULL);
+</code></pre>
+        Instead of using <strong>endl</strong> for a new line, use
+        <strong>"\n"</strong>
+      <ul>
+        <li><strong>Python</strong>: Import sys library</li>
+      </ul>
+      <pre><code>//input
+sys.stdin.readline()
+//output
+sys.stdout.write("YES\n")
+sys.stdout.write("NO\n")
+</code></pre>
+      <ul>
+        <li>
+          <strong>Java</strong>: Use the buffered reader and buffered writer
+          classes
+        </li>
+      </ul>
+        Import these java classes: java.io.BufferedReader;
+        java.io.InputStreamReader; java.io.BufferedWriter;<br> import
+        java.io.OutputStreamWriter; java.util.StringTokenizer;
+      <pre><code>BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
+</code></pre>
+      For each line, create a string tokenizer:
+      <pre><code>StringTokenizer tokenizer = new StringTokenizer(reader.readLine());
+</code></pre>
+      To get a value use:
+      <pre><code>tokenizer.nextToken();
+Integer.parseInt(tokenizer.nextToken()); //for example
+</code></pre>
       </p>
     </div>
   </body>

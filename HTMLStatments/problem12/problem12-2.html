@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bounty Challenge</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet" />
+    <link rel="stylesheet" href="./statmentStyle.css" />
+  </head>
+
+  <body
+    class="stackedit"
+    style="
+      background-image: url('../statmentBG.png');
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: center !important;
+    "
+  >
+    <div class="stackedit__html" style="font-size: 10px; padding-left: 60px">
+      <h2 id="explanation">Note:</h2>
+      <p>First example:</p>
+      <p>
+        For initial bounty <em>B</em> = 300, the bounty will change as follows :
+      </p>
+      <p>i = 1: 300 &lt;= 300, Trafalgar will run away.</p>
+      <p>i = 2: 300 &gt; 200, Trafalgar will win and bounty will become 400</p>
+      <p>i = 3: 400 &lt;= 500, Trafalgar will run away.</p>
+      <p>i = 4: 400 &gt; 100, Trafalgar will win and bounty will become 500</p>
+      <p>i = 5: 500 &lt;= 700, Trafalgar will run away.</p>
+      <p>
+        After all the fights, the final bounty is less than or equal to
+        <em>L</em>
+      </p>
+      <p>If <em>B</em> = 301, we will have:</p>
+      <p>i = 1: 301 &gt; 300, Trafalgar will win and bounty will become 401.</p>
+      <p>i = 2: 401 &gt; 200, Trafalgar will win and bounty will become 501.</p>
+      <p>i = 3: 501 &gt; 500, Trafalgar will win and bounty will become 601.</p>
+      <p>i = 4: 601 &gt; 100, Trafalgar will win and bounty will become 701.</p>
+      <p>i = 5: 701 &gt; 700, Trafalgar will win and bounty will become 801.</p>
+      <p>
+        After all the fights, the final bounty will be greater than <em>L</em>.
+      </p>
+      <p><em>B</em> = 300 is then the maximum initial bounty.</p>
+    </div>
+  </body>
+</html>

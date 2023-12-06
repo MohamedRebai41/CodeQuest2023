@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The circle of death</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet" />
+    <link rel="stylesheet" href="./statmentStyle.css" />
+  </head>
+
+  <body
+    class="stackedit"
+    style="
+      background-image: url('../statmentBG.png');
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: center !important;
+    "
+  >
+    <div
+      class="stackedit__html"
+      style="padding-left: 65px; padding-right: 65px"
+    >
+      <h1 id="problem-name">Problem L : The circle of death</h1>
+      <p>
+        In the world of One Piece, there is a certain legend about a circle at
+        sea where numerous ships vanished without a trace. This circle came to
+        be known as the circle of death.<br />
+        The straw hat pirates found themselves obligated to pass through this
+        circle to reach a certain island.<br />
+        Nami, their bright navigator, uncovered the secret behind this
+        phenomenon.<br />
+        She found out three key observations about the circle:
+      </p>
+      <ul>
+        <li>
+          The circle of death is formed by <strong>n</strong> specific points.
+        </li>
+        <li>
+          Within the circle of death, there are danger zones and safe zones.
+        </li>
+        <li>
+          The danger zones are the <strong>right triangles</strong> that can be
+          formed using any 3 points from the <strong>n</strong> points forming
+          the circle.
+        </li>
+      </ul>
+      <p>
+        Help Nami find the number of danger zones so that the ship can avoid
+        them to reach their destination safely.
+      </p>
+      <h2 id="input-format">Input Format</h2>
+      <p>
+        The first line contains an integer n
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>3</mn>
+                    <mo>≤</mo>
+                    <mi>n</mi>
+                    <mo>≤</mo>
+                    <mn>1</mn>
+                    <msup>
+                      <mn>0</mn>
+                      <mn>5</mn>
+                    </msup>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >(3 ≤ n ≤10^5)</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">3</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.77194em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord mathnormal">n</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1.06411em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">1</span
+                ><span class="mord"
+                  ><span class="mord">0</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.814108em"
+                          ><span
+                            class=""
+                            style="top: -3.063em; margin-right: 0.05em"
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight">5</span></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >, the number of points.
+      </p>
+      <p>
+        The second line contains n space-separated integers <strong>aᵢ</strong>
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>1</mn>
+                    <mo>≤</mo>
+                    <mi>a</mi>
+                    <mtext>ᵢ</mtext>
+                    <mo>≤</mo>
+                    <mn>1</mn>
+                    <msup>
+                      <mn>0</mn>
+                      <mn>9</mn>
+                    </msup>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >(1≤aᵢ≤10^9)</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">1</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.77194em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord mathnormal">a</span
+                ><span class="mord">ᵢ</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1.06411em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord">1</span
+                ><span class="mord"
+                  ><span class="mord">0</span
+                  ><span class="msupsub"
+                    ><span class="vlist-t"
+                      ><span class="vlist-r"
+                        ><span class="vlist" style="height: 0.814108em"
+                          ><span
+                            class=""
+                            style="top: -3.063em; margin-right: 0.05em"
+                            ><span class="pstrut" style="height: 2.7em"></span
+                            ><span class="sizing reset-size6 size3 mtight"
+                              ><span class="mord mtight">9</span></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >
+        – the <strong>length of the arc</strong> between point i and point i+1
+        <span class="katex--inline"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>1</mn>
+                    <mo>≤</mo>
+                    <mi>i</mi>
+                    <mo>≤</mo>
+                    <mi>n</mi>
+                    <mtext>−</mtext>
+                    <mn>1</mn>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex"
+                    >(1≤i≤n−1)</annotation
+                  >
+                </semantics>
+              </math></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mopen">(</span><span class="mord">1</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.79549em; vertical-align: -0.13597em"
+                ></span
+                ><span class="mord mathnormal">i</span
+                ><span class="mspace" style="margin-right: 0.277778em"></span
+                ><span class="mrel">≤</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.277778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1em; vertical-align: -0.25em"
+                ></span
+                ><span class="mord mathnormal">n</span
+                ><span class="mord">−1</span><span class="mclose">)</span></span
+              ></span
+            ></span
+          ></span
+        >, and aₙ is the distance between the point number n and the first
+        point.
+      </p>
+      <h2 id="output-format">Output Format</h2>
+      <p>Output the number of unique danger zones that appear in the circle.</p>
+      <h2 id="example">Example:</h2>
+      <p>Input :</p>
+      <pre><code>4
+3 2 1 4
+</code></pre>
+      <p>Output :</p>
+      <pre><code>2
+</code></pre>
+      <p>Input :</p>
+      <pre><code>3
+1 2 3
+</code></pre>
+      <p>Output :</p>
+      <pre><code>1
+</code></pre>
+    </div>
+  </body>
+</html>
