@@ -1,4 +1,5 @@
 
+
 # Problem A : Hidden Treasures
 
 ## Statement:
@@ -41,7 +42,7 @@ The diagram below illustrates the diagonals of a **3×4** matrix:
         </table>
 </div>
 
-(Elements 1, 6 and 11 make a diagonal, Element 4 makes a diagonal by itself too...)
+Elements 1, 6 and 11 make a diagonal, Element 4 makes a diagonal by itself too...
 
 An element of position **(x, y)** contains a treasure if and only if it divides the diagonal into two parts with equal sum. In other words, the sum the elements above our element in the diagonal is equal to the sum of elements under our element in the diagonal.
 
@@ -54,9 +55,9 @@ Output **"YES"** if that position contains a treasure, and **"NO"** otherwise.
 
 
 ## Input :
-The first line contains 3 integers **n**, **m** (2≤n, m≤2×10<sup>3</sup>), number of rows and number of columns of our matrix respectively and **q** queries (1≤q≤10<sup>6</sup>).
+The first line contains 3 integers **n**, **m** $(2≤n, m≤2.10^3)$, number of rows and number of columns of our matrix respectively and **q** queries $(1≤q≤10^6)$.
 
-The next n lines each contain m integers seperated by spaces describing rows of the matrix. Each integer of the matrix **a<sub>i,j</sub>** &isin; [-10<sup>9</sup>, 10<sup>9</sup>].
+The next n lines each contain **m** space separated integers describing rows of the matrix. Each integer of the matrix  $a_{ij}$ $(-10^9 \leq a_{ij} \leq 10^9)$
 
 The next q lines each contain 2 integers **x** and **y** (1≤x≤n, 1≤y≤m), a specific row and column of our matrix respectively.
 
@@ -123,24 +124,41 @@ In the **first** query the answer is YES because both sum are equal to 0 (there 
 <br>In the **fourth** query the answer is NO bcause: m[3][1] = 11 $\neq$ 0 (there are no elements in the lower part of the diagonal).
 
 
-Since the input/output for this problem can be very large, you need to use fast input/output, it is listed below how to do so for the available programmnig languages:
+## Important
 
-**C++**: Add these lines to your code:
-<br>ios::sync_with_stdio(false);
-<br>cin.tie(NULL);
-<br>cout.tie(NULL);
-<br>Instead of using **endl** for a new line, use **"\n"**
+Since the input/output for this problem can be very large, you need to use **fast input/output** to optimize performance, it is listed below how to do so for the available programming languages:
 
-**Python**: Import sys library
-<br>Use this for input: sys.stdin.readline()
-<br>Use this for output: sys.stdout.write("YES\n") \ sys.stdout.write("NO\n")
+* **C++**: 
 
-**Java**: Use buffered reader and buffered writer
-<br> -Import these java classes: java.io.BufferedReader; java.io.InputStreamReader; java.io.BufferedWriter; import java.io.OutputStreamWriter; java.util.StringTokenizer;
-<br> -Create a buffered reader and buffered writer:
-<br>BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-<br>BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
-<br> -For each line, create a string tokenizer:
-<br>StringTokenizer tokenizer = new StringTokenizer(reader.readLine());
-<br> -To get a value use: tokenizer.nextToken() (Example: int n = Integer.parseInt(tokenizer.nextToken());)
+Add these lines to your code:
+ ```
+ios::sync_with_stdio(false);
+cin.tie(NULL);
+cout.tie(NULL);
+```
+Instead of using **endl** for a new line, use **"\n"**
 
+* **Python**: Import sys library
+``` 
+//input
+sys.stdin.readline()
+//output
+sys.stdout.write("YES\n")
+sys.stdout.write("NO\n")
+```
+
+**Java**: Use the buffered reader and buffered writer classes
+Import these java classes: java.io.BufferedReader; java.io.InputStreamReader; java.io.BufferedWriter; import java.io.OutputStreamWriter; java.util.StringTokenizer;
+```
+BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
+```
+For each line, create a string tokenizer:
+```
+StringTokenizer tokenizer = new StringTokenizer(reader.readLine());
+```
+To get a value use:
+``` 
+tokenizer.nextToken();
+Integer.parseInt(tokenizer.nextToken()); //for example
+```
