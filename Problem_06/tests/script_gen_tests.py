@@ -36,7 +36,8 @@ def generate_matrix_input(n, m, q, maxi, index, yes_queries=None):
         queries = []
         for _ in range(q):
             x = randint(1, n)
-            queries.append([x, x])
+            y = randint(1, m)
+            queries.append([x, y])
         for el in yes_queries:
             queries.append([el[0], el[1]])
         shuffle(queries)
@@ -44,5 +45,5 @@ def generate_matrix_input(n, m, q, maxi, index, yes_queries=None):
             file.write(f"{el[0]} {el[1]}" + "\n")
 
 
-yes_queries = [[(2 * 10**3) // 2, 10**3 // 2], [(2 * 10**3) // 2 + 1, 10**3//2], [10**3//2 + 2, 10**3//2], [9, 1], [1, 10]]
-generate_matrix_input(2*1000, 2*1000, 4 * 10**6 - len(yes_queries), 9, 3, yes_queries)
+yes_queries = [[(10**3) // 2, 10**3 // 2], [(10**3) // 2 + 1, 10**3//2], [10**3//2 + 2, 10**3//2], [9, 1], [1, 10]]
+generate_matrix_input(1000, 1000, 10**6 - len(yes_queries), 9, 3, yes_queries)

@@ -11,7 +11,7 @@ Given the list of the genders of the enemies, tell Usopp if he needs to send Nam
 ## Input :
 
 The first line contains the number **_N_** the length of the following string. $1\le N \le 10^6$ <br>
-The first line contains a string **S** the list of the genders of the enemies: **'W'** for _woman_, **'M'** for _man_.
+The second line contains a string **S** the list of the genders of the enemies: **'W'** for _woman_, **'M'** for _man_.
 
 ## Output :
 

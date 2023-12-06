@@ -7,7 +7,7 @@ The rules of the game are:
 
 - Game starts at turn 1 from the left digits of $A$ and $B$.
 
-- in the $i$-th turn, if $a_i > b_i$, the current player must swap $a_i$ and $b_i$. The current player keeps playing the next turn.
+- in the $i$-th turn, if $a_i > b_i$, the current player keeps playing the next turn.
 
 - in the $i$-th turn, if $a_i < b_i$, the current player loses his turn and the other player plays the next turn.
 
@@ -65,4 +65,4 @@ First example:
 In the first turn, Luffy swaps 2 and 1 and keeps playing. In the second turn, Luffy can't swap 3 and 5 so he loses his turn. In the third turn, Zoro can't swap 4 and 5 so he also loses his turn. In the fourth turn, the game ends with Luffy having this turn, so Luffy wins.
 
 Second example:
-In the first turn, Luffy swaps 2 and 1 and keeps playing. In the second turn, Luffy can't swap 3 and 5 so he loses his turn. In the third turn, Zoro choses to let Luffy play the next turn. In the fourth turn, Luffy can't swap 4 and 5 so he loses his turn. In the fifth turn, the game ends with Zoro having this turn, so Zoro wins.
+In the first turn, 2 > 1 so Luffy keeps playing. In the second turn, 3 < 5 so Luffy loses his turn. In the third turn, Zoro choses to let Luffy play the next turn. In the fourth turn, 4 < 5 so Luffy loses his turn. In the fifth turn, the game ends with Zoro having this turn, so Zoro wins.

@@ -4,6 +4,8 @@ using namespace std;
 int matrix[2002][2002];
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr); cout.tie(nullptr);
     int n, m, q; cin >> n >> m >> q;
     for (int i = 1; i <= n; i++){
         for (int j = 1; j <= m; j++){
@@ -23,10 +25,10 @@ int main() {
             lower_sum += matrix[i][j];
         }
         if (upper_sum == lower_sum){
-            cout << "YES" << endl;
+            cout << "YES \n";
         }
         else{
-            cout << "NO" << endl;
+            cout << "NO \n";
         }
     }
     return 0;

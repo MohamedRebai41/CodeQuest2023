@@ -6,6 +6,9 @@ long long matrix[2002][2002];
 long long prefixSum[2002][2002];
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr); cout.tie(nullptr);
+
     int n, m, q; cin >> n >> m >> q;
     for (int i = 1; i <= n; i++){
         for (int j = 1; j <= m; j++){
@@ -24,10 +27,10 @@ int main() {
         cin >> x >> y;
         // min(n - x, m - y) + x and min(n - x, m - y) + y denotes the position of last element in the diagonal associated to x, y
         if (prefixSum[x - 1][y - 1] == prefixSum[min(n - x, m - y) + x][min(n - x, m - y) + y] - prefixSum[x][y]){
-            cout << "YES" << endl;
+            cout << "YES \n";
         }
         else{
-            cout << "NO" << endl;
+            cout << "NO \n";
         }
     }
     return 0;

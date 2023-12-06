@@ -48,3 +48,8 @@ Output :
 2
 3
 ```
+
+## Note:
+
+In the **first** testcase, the first empty spot is picked (position with index 3), the direction that maximizes the answer is left.
+<br>In the **second** testcase, there are 2 possible empty spots, the 4th empty spot (position with index 10) and the 5th empty spot (position with index 11), the direction that maximizes the answer is left.
