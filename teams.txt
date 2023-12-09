@@ -1,0 +1,67 @@
+site	account	displayname	password	permdisplay	
+1	team1	F society	vHsV2W4h	true	
+1	team2	Code_Harvester	iWU7GCx7	true	
+1	team3	OMotivation	UM5Z3Fxv	true	
+1	team4	Info innovators	XZpyAB7N	true	
+1	team5	Hiroshima	u35UUqgc	true	
+1	team6	Glory	essuzCYh	true	
+1	team7	heart pirates	UesC6wqW	true	
+1	team8	GHAFASSA	ZuTkg692	true	
+1	team9	ENSTARZ	93xAj4cg	true	
+1	team10	Champions	S2g6N2uc	true	
+1	team11	Saha likem	AFjFzrXj	true	
+1	team12	darkonet	85UjAu54	true	
+1	team13	Aster	o8eYYYc6	true	
+1	team14	Bsissa	63PJFoNX	true	
+1	team15	coding butterflies	vkuKby3o	true	
+1	team16	Team Jardin	oGJdzGYo	true	
+1	team17	bugs bunny	EchSgg42	true	
+1	team18	DezTakhtef	yoGcagVe	true	
+1	team19	Rani_mouadhaf	WZhFB8Ng	true	
+1	team20	Kabout D. Trèfle	6f43KJPY	true	
+1	team21	Alley-oop	ZcbH3ucv	true	
+1	team22	fatayet	PzqFyrS4	true	
+1	team23	Jbabo team	hq8ZSiF6	true	
+1	team24	Berserkers	qcF3R333	true	
+1	team25	Lvl999+	BEHKv2zv	true	
+1	team26	Mugiwara	w37U4gCa	true	
+1	team27	BOB8ZEL	UdqfsKG8	true	
+1	team28	Awled Errisk	YrzeuHNY	true	
+1	team29	K.J.M	3bCcger5	true	
+1	team30	Code Crushers	5zazgzJC	true	
+1	team31	Untraceable	HBU7X2BJ	true	
+1	team32	358	wtNW3ZoZ	true	
+1	team33	RED HAIR	56er9W75	true	
+1	team34	StrawHatCoders	TVo3StX2	true	
+1	team35	TripleY	ssPXsyrA	true	
+1	team36	Tabouna_1003	kKikEoLh	true	
+1	team37	Zoro's Three Swords	bCVf8EhL	true	
+1	team38	Marineford Mavens	FKVjUUSt	true	
+1	team39	Node_Modules	x8236WXq	true	
+1	team40	Code Crusaders	KXbkUbiN	true	
+1	team41	قعيدة عسل	sJMPE2pU	true	
+1	team42	BitRaven	gMbuLHU4	true	
+1	team43	Marwen winek	hsJPjkpV	true	
+1	team44	pinapple	qAHv6vJq	true	
+1	team45	Vegaforce3.0	VDCsKahX	true	
+1	team46	3aTeam	FxLJqcco	true	
+1	team47	Tech Girls	RMtyLKsr	true	
+1	team48	The Admirals	MZofwG6S	true	
+1	team49	chicken wings	RrrHCH6h	true	
+1	team50	Sunny	Aj2Necsp	true	
+1	team51	Fawzi	AE4ANBzJ	true	
+1	team52	Errret	S6W7Wjxq	true	
+1	team53	Heaven	gPAbHLTd	true	
+1	team54	O(1)	XB7CixWt	true	
+1	team55	Watermelon Problem Solvers	eVwEpGAd	true	
+1	team56	bitStorm	kgz3yPVd	true	
+1	team57	Accepted	bfusjp3s	true	
+1	team58	SunBros	wzT3Eka7	true	
+1	team59	T1	qperZJCr	true	
+1	team60	Bird of Hermes	9hDWxDE2	true	
+1	team61	SUP'TCHEBYCHEV	VF9XgNRE	true	
+1	team62	sup'vikings	KpU6kW2E	true	
+1	team63	The Yonkos	7YCag4Mp	true	
+1	team64	HamasTN	VfHpjXaZ	true	
+1	team65	Dynamic	63MXadC9	true	
+1	team66	Debugging_Trio	tc9cVuUe	true	
