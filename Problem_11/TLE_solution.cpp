@@ -7,7 +7,7 @@ int main()
     cin >> n;
     int m;
     cin >> m;
-    int tab[m];
+    vector<string> tab(m);
     for (int i = 0; i < m; i++)
     {
         cin >> tab[i];
