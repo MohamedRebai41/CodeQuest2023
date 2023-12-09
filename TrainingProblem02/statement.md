@@ -33,7 +33,7 @@ NoNoNoNo
 Input :  
 
 ```
-3
+2
 1 I 10
 9 Sentomaru 1
 ```
