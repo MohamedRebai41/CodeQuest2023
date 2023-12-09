@@ -1,6 +1,6 @@
 import java.util.*;
 
-class AC_solution {
+class BipGraph {
     private static final int NIL = 0;
     private static final int INF = Integer.MAX_VALUE;
 
@@ -8,7 +8,7 @@ class AC_solution {
     private List<Integer>[] adj;
     private int[] pairU, pairV, dist;
 
-    public AC_solution(int m, int n) {
+    public BipGraph(int m, int n) {
         this.m = m;
         this.n = n;
         adj = new ArrayList[m + 1];
