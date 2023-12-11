@@ -64,4 +64,4 @@ site	account	displayname	password	permdisplay
 1	team63	The Yonkos	7YCag4Mp	true	
 1	team64	HamasTN	VfHpjXaZ	true	
 1	team65	Dynamic	63MXadC9	true	
-1   team66  Debugging_Trio  tc9cVuUe    true
+1	team66	Debugging_Trio	tc9cVuUe	true    

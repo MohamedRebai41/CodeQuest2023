@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>  
+#include<bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -29,7 +29,7 @@ int main() {
         {
             donors[3]-=injured[3];
         }
-        else 
+        else
         {
             cout << "NO" << endl;
             continue;
@@ -37,8 +37,10 @@ int main() {
         // then we check if we can satisfy the injured of blood type B
         if(injured[1] <= donors[1] + donors[3])
         {
+            int temp = donors[1];
             donors[1] = max(donors[1] - injured[1],0);
-            donors[3] -= max(injured[1] - donors[1],0);
+            injured[1] = max(injured[1]-temp, 0);
+            donors[3] = donors[3] - injured[1];
         }
         else
         {
@@ -48,8 +50,10 @@ int main() {
         // then we check if we can satisfy the injured of blood type A
         if(injured[0] <= donors[0] + donors[3])
         {
+            int temp = donors[0];
             donors[0] = max(donors[0] - injured[0],0);
-            donors[3] -= max(injured[0] - donors[0],0);
+            injured[0] = max(injured[0]-temp, 0);
+            donors[3] = donors[3] - injured[0];
         }
         else
         {
