@@ -1,16 +1,12 @@
 # Problem E - Bounty Challenge
 
+Let's denote by $f(B)$ the value of the bounty after simulating the fights using an initial bounty of $B$
 
-Linearly searching for the answer will have a time complexity of O(nL), which will yield TLE.
+Linearly searching for the answer will have a time complexity of $O(nL)$, which will yield TLE given the constraints
 
-We will solve the problem using binary search.
-
-Since the conditions will not be met starting from some value $B+1$, the problem reduces to searching the value $B$ using binary search, simulating the process of fights in each iteration.
-
- For initial bounty $B$ : after simulating the fights, $B$ will become $B'$. 
-    
-If $B' > L$, then we look at the left hand side. ($high = mid - 1$). 
-    
-Else, we update our answer (it satisfies the conditions) and we take the right hand side ($low = mid + 1$).
-
-Time Complexity: $O(nLogL)$
+Since for $B_1 < B_2$ we have $f(B_1) < f(B_2)$ ; in other words $f$ is a monotonous function, we can instead use binary search to look for the maximum initial bounty value 
+* Our search space is $[0,L]$
+* The check we perform in our binary search consists of simulating the process of fights
+  * If $f(B) > L$, the solution can only figure in the $[left, mid-1]$ space
+  * If $f(B) \leq L$, the solution is valid but we look for a better solution in the $[mid+1, right]$ space since we're looking to maximize the initial bounty B
+* The check is performed with a time complexity of $O(n)$ => the overall time complexity of our algorithm is thus $O(nLogL)$
