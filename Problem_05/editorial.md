@@ -24,3 +24,5 @@ The problem is thus reduced to the following problem: can $n$ be written: $$n=11
 	* $n=11a+111b = 11a +111(11q+r) = 11(a+111q)+111r$
 	where $(0\leq r \leq10)$ 
 	* We iterate over the possible values of r and check if $n-111b$ is divisible by $11$
+
+Read more about the [extended euclidean algorithm](https://brilliant.org/wiki/extended-euclidean-algorithm/)
