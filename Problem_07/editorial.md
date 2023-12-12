@@ -1,27 +1,27 @@
 # Problem L - Circle of death
 
-First, to determine how many right triangles in the circle we need to know how many points in the circle that the length of the arc between this two points is 1/2 permieter of the circle.
+A triangle in a circle is considered a right triangle if its hypotenuse is a diameter of the circle.
+So there exists two points such that the distance between them is 1/2 the perimeter of the circle.
+for each two points that the distance between them is 1/2 the perimeter of the circle, there exists n-2 right triangles because the third point can be anywhere on the circle.
+So now how we will find the distance between all pairs of points ?
 
-So, we will calculate the perimeter of the circle by summing the length of the arc between each adjacent points in the circle
+First, We will do a prefix sum on the array of distances so we will get the distance between two points in O(1).
+Suppose b a vector
+$$ b[p]=\sum\_{j=1}^{p}a[j-1] \quad where\quad 1\leq p \leq n, b[0]=0$$
 
-$$\sum\_{i=1}^{n} a[i]$$
-If the sum is odd then the number of right triangles is 0 because we can't get two points that the length of the arc between them is 1/2 of the perimeter of the circle.
+Second, how to find the pairs ?
 
-else if the sum is even then we will compute how many points in the circle that the length of the arc between this two points is 1/2 permieter of the circle.
+## Solution 1 : two pointers technique:
 
-We will create a vector of distances between the first point and the other points in the circle
+We will fixe two indexes i and j and we will move them until we find the distance.
+i will start from 0 and j from 1. if b[j]-b[i] = 1/2 perimeter then we will add n-2 to the answer and we will increment i and j else if b[j]-b[i] < 1/2 perimeter then we will increment j because we need to increase the distance between the two points else we will increment i because we need to decrease the distance between the two points.
+This solution will take O(n) time.
 
-Let suppose that the vector is b, so b[0]=0, b[1] = distance between first point and second point, b[2] = distance between first point and third point, and so on.
+## Solution 3 : hash table:
 
-$$b[p] = \sum\_{i=1}^{p} a[i-1] ,b[0]=0,1\leq p \leq n$$
-Now Let dis = sum/2 and ans = 0
+We will fixe one index i and we will search for the second index j such that b[j]-b[i] = 1/2 perimeter using hash table.
 
-Now , we will iterate over the vector b , we will fixe at first two indexes i and j where i=0 and j=1
+## Solution 3 : binary search:
 
-If b[j] - b[i] < dis then we will increment j by one to get bigger distance between the first point and the second point
-
-Else if b[j] - b[i] > dis then we will increment i by one to get smaller distance between the first point and the second point
-
-Else if b[j] - b[i] = dis then we will increment ans by n-2 (n the number of points) because we will have n-2 right triangles with the first point and the second point and increment both i and j with one
-
-At the end we will print ans
+We will just fixe one index i and we will search for the second index j such that b[j]-b[i] = 1/2 perimeter using binary search.
+This solution will take O(nlogn) time.
